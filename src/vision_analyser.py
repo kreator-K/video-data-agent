@@ -1,36 +1,36 @@
-import openai
 import base64
 import json
 import os
 from pathlib import Path
+from openai import OpenAI
 from dotenv import load_dotenv
 
-# Load API keys from .env file
 load_dotenv()
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+client = OpenAI(
+    base_url="https://integrate.api.nvidia.com/v1",
+    api_key=os.getenv("NVIDIA_API_KEY")
+)
 
 
 def encode_image(image_path: str) -> str:
-    """Converts an image file to base64 string for API transmission."""
     with open(image_path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
 
 
 def analyse_frame(image_path: str) -> dict:
-    """
-    Sends a single frame to GPT-4o and returns structured brand insights.
-    """
     base64_image = encode_image(image_path)
 
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": """Analyse this video frame for brand intelligence. 
+    try:
+        response = client.chat.completions.create(
+            model="meta/llama-3.2-11b-vision-instruct",
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": """Analyse this video frame for brand intelligence.
 Return a JSON object with exactly these fields:
 - setting: where this takes place (kitchen, outdoor, studio, etc.)
 - mood: visual mood (warm, bright, dark, energetic, calm, etc.)
@@ -41,71 +41,55 @@ Return a JSON object with exactly these fields:
 - people_count: number of people visible
 
 Return ONLY valid JSON. No explanation, no markdown, just JSON."""
-                    },
-                    {
-                        "type": "image_url",
-                        "image_url": {
-                            "url": f"data:image/jpeg;base64,{base64_image}",
-                            "detail": "low"
+                        },
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/jpeg;base64,{base64_image}"
+                            }
                         }
-                    }
-                ]
-            }
-        ],
-        max_tokens=300
-    )
+                    ]
+                }
+            ],
+            max_tokens=500
+        )
 
-    choice = response.choices[0] if response.choices else None
-    message = getattr(choice, "message", None)
-    raw = None
+        if not response.choices or not response.choices[0].message.content:
+            print(f"    ⚠ Empty response — skipping")
+            return {"error": "empty_response", "frame": Path(image_path).name}
 
-    if message is not None:
-        raw = getattr(message, "content", None)
-        if raw is None:
-            raw = getattr(message, "refusal", None)
-        if raw is None and getattr(message, "tool_calls", None):
-            raw = json.dumps(
-                [
-                    tc.model_dump() if hasattr(tc, "model_dump") else tc.__dict__
-                    for tc in message.tool_calls
-                ]
-            )
+        raw = response.choices[0].message.content.strip()
 
-    if not isinstance(raw, str):
-        raw = "" if raw is None else str(raw)
+        if raw.startswith("I'm sorry"):
+            print(f"    ⚠ Model refused frame — skipping")
+            return {"error": "model_refusal", "frame": Path(image_path).name}
 
-    if raw.strip():
-        try:
-            return json.loads(raw)
-        except json.JSONDecodeError:
-            return {"raw_response": raw}
+        if "```" in raw:
+            raw = raw.split("```")[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+            raw = raw.strip()
 
-    response_payload = (
-        response.model_dump()
-        if hasattr(response, "model_dump")
-        else getattr(response, "to_dict", lambda: str(response))()
-    )
-    return {
-        "raw_response": "No text content returned from model",
-        "response": response_payload,
-    }
+        return json.loads(raw)
+
+    except json.JSONDecodeError:
+        return {"error": "json_parse_error", "raw": raw}
+
+    except Exception as e:
+        print(f"    ⚠ API error: {str(e)}")
+        return {"error": str(e), "frame": Path(image_path).name}
 
 
 def analyse_video_frames(frames_dir: str, sample_every: int = 3) -> list:
-    """
-    Analyses a sample of frames from a video.
-    sample_every=3 means we look at 1 in every 3 frames to save API cost.
-    """
     frames = sorted(Path(frames_dir).glob("*.jpg"))
 
     if not frames:
         raise ValueError(f"No frames found in {frames_dir}")
 
-    # Sample frames to keep costs low
     sampled = frames[::sample_every]
 
     print(f"\nAnalysing {len(sampled)} frames (sampled from {len(frames)} total)...")
-    print("This will use your OpenAI credits — estimated cost: < $0.10\n")
+    print("Using Nvidia free API — no cost\n")
 
     results = []
     for i, frame_path in enumerate(sampled):
@@ -114,7 +98,6 @@ def analyse_video_frames(frames_dir: str, sample_every: int = 3) -> list:
         analysis["frame"] = frame_path.name
         results.append(analysis)
 
-    # Save results
     output_path = Path(frames_dir) / "vision_analysis.json"
     with open(output_path, "w") as f:
         json.dump(results, f, indent=2)
@@ -126,7 +109,6 @@ def analyse_video_frames(frames_dir: str, sample_every: int = 3) -> list:
 if __name__ == "__main__":
     import sys
 
-    # Find most recent frames directory
     frames_base = Path("data/frames")
     frame_dirs = [d for d in frames_base.iterdir() if d.is_dir()]
 
@@ -139,13 +121,15 @@ if __name__ == "__main__":
 
     results = analyse_video_frames(str(latest_dir))
 
-    print("\n--- Vision Analysis Preview ---")
-    if results:
-        first = results[0]
-        print(f"Setting: {first.get('setting')}")
-        print(f"Mood: {first.get('mood')}")
-        print(f"Actions: {first.get('actions')}")
-        print(f"Brands detected: {first.get('brands')}")
+    good_results = [r for r in results if "error" not in r]
+
+    print(f"\n--- Vision Analysis Preview ---")
+    print(f"Successful: {len(good_results)}/{len(results)} frames")
+
+    if good_results:
+        first = good_results[0]
+        print(f"Setting:  {first.get('setting')}")
+        print(f"Mood:     {first.get('mood')}")
+        print(f"Actions:  {first.get('actions')}")
+        print(f"Brands:   {first.get('brands')}")
         print(f"Products: {first.get('products')}")
-        print(f"Text visible: {first.get('text_visible')}")
-        print(f"People count: {first.get('people_count')}")
