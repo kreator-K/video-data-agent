@@ -184,9 +184,10 @@ Run the eval:
 python eval/run_eval.py
 ```
 
-The current eval uses 5 hand-labeled frames from `Real vs Knockoff Pizza Rolls`
-and compares `brands_actually_visible` against the model output in
-`vision_analysis.json`.
+The current eval uses 36 hand-labeled frames across 18 videos and compares
+`brands_actually_visible` against the model output in `vision_analysis.json`.
+The set includes packaged food, phone reviews, partial logos, background/apparel
+logos, and low-light indoor frames.
 
 Metrics reported:
 
@@ -197,7 +198,21 @@ Metrics reported:
 Results are saved to:
 
 ```text
-eval/eval_results.json
+eval/stage2_metrics.json
+```
+
+Current score:
+
+```text
+Precision: 0.85
+Recall:    0.79
+F1 Score:  0.81
+```
+
+Known failure patterns and the next refinement loop are tracked in:
+
+```text
+eval/stage2_failure_report.md
 ```
 
 ## Project Structure

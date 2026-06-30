@@ -1,0 +1,211 @@
+[
+  {
+    "url": "https://www.youtube.com/shorts/1UsG1q0l5bE",
+    "status": "ok",
+    "title": "The Ultimate Pizza Rolls Hack #shorts",
+    "frames_analyzed": 5,
+    "frames_with_brand": 0,
+    "model_error_or_raw_frames": 2,
+    "predicted_brands": [],
+    "report_path": "data/frames/The Ultimate Pizza Rolls Hack #shorts/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://youtube.com/shorts/nE47x5rglms?si=s6m7oPtB5H6VXODd",
+    "status": "ok",
+    "title": "Deliciously Simple Pizza Rolls Recipe!",
+    "frames_analyzed": 6,
+    "frames_with_brand": 0,
+    "model_error_or_raw_frames": 5,
+    "predicted_brands": [],
+    "report_path": "data/frames/Deliciously Simple Pizza Rolls Recipe!/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://youtube.com/shorts/XzgABELJTpQ?si=dFYPuYWzFv3KdLbn",
+    "status": "ok",
+    "title": "Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer",
+    "frames_analyzed": 5,
+    "frames_with_brand": 0,
+    "model_error_or_raw_frames": 2,
+    "predicted_brands": [],
+    "report_path": "data/frames/Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/aFJCXdySX0I",
+    "status": "ok",
+    "title": "How to Upgrade Pizza Rolls",
+    "frames_analyzed": 3,
+    "frames_with_brand": 1,
+    "model_error_or_raw_frames": 1,
+    "predicted_brands": [
+      "allrecipes"
+    ],
+    "report_path": "data/frames/How to Upgrade Pizza Rolls/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/H-Wjid0mLaM",
+    "status": "ok",
+    "title": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frames_analyzed": 4,
+    "frames_with_brand": 0,
+    "model_error_or_raw_frames": 3,
+    "predicted_brands": [],
+    "report_path": "data/frames/Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/BDykCT0k9eQ",
+    "status": "retry_merged_ok",
+    "title": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frames_analyzed": 6,
+    "frames_with_brand": 2,
+    "model_error_or_raw_frames": 4,
+    "predicted_brands": [
+      "DREO",
+      "Totino's"
+    ],
+    "report_path": "data/frames/5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/CMW4kgd--JI",
+    "status": "ok",
+    "title": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frames_analyzed": 8,
+    "frames_with_brand": 0,
+    "model_error_or_raw_frames": 6,
+    "predicted_brands": [],
+    "report_path": "data/frames/Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/Df9JJE88GqE",
+    "status": "ok",
+    "title": "Pizza Rolls",
+    "frames_analyzed": 9,
+    "frames_with_brand": 2,
+    "model_error_or_raw_frames": 0,
+    "predicted_brands": [
+      "Pillsbury",
+      "Great Value",
+      "Hormel"
+    ],
+    "report_path": "data/frames/Pizza Rolls/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/EBmYohVJ-Tg",
+    "status": "ok",
+    "title": "Homemade pizza rolls",
+    "frames_analyzed": 8,
+    "frames_with_brand": 0,
+    "model_error_or_raw_frames": 4,
+    "predicted_brands": [],
+    "report_path": "data/frames/Homemade pizza rolls/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/GBim8bTa68U",
+    "status": "ok",
+    "title": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frames_analyzed": 8,
+    "frames_with_brand": 0,
+    "model_error_or_raw_frames": 5,
+    "predicted_brands": [],
+    "report_path": "data/frames/Homemade Pizza Rolls \uff5c quick and easy!/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/g0lGmoNJQT4",
+    "status": "ok",
+    "title": "Beef Wellington but make it a cheeseburger \ud83c\udf54\ud83c\udf54",
+    "frames_analyzed": 4,
+    "frames_with_brand": 0,
+    "model_error_or_raw_frames": 3,
+    "predicted_brands": [],
+    "report_path": "data/frames/Beef Wellington but make it a cheeseburger \ud83c\udf54\ud83c\udf54/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/4eD2QwVN60M",
+    "status": "ok",
+    "title": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frames_analyzed": 11,
+    "frames_with_brand": 1,
+    "model_error_or_raw_frames": 5,
+    "predicted_brands": [
+      "Wolf"
+    ],
+    "report_path": "data/frames/Giada De Laurentiis\u2019 Favorite Pizza Rolls!/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/3aY6GAjOCC0",
+    "status": "ok",
+    "title": "The Best Rugged Phone\uff1f",
+    "frames_analyzed": 19,
+    "frames_with_brand": 2,
+    "model_error_or_raw_frames": 10,
+    "predicted_brands": [
+      "ulefone"
+    ],
+    "report_path": "data/frames/The Best Rugged Phone\uff1f/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/gJaJRh6DJgQ",
+    "status": "ok",
+    "title": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frames_analyzed": 4,
+    "frames_with_brand": 1,
+    "model_error_or_raw_frames": 3,
+    "predicted_brands": [
+      "Spotify"
+    ],
+    "report_path": "data/frames/The Best Budget Phone for Everyday Use  Review and Gaming Performance/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/l3ujdTrbD6w",
+    "status": "ok",
+    "title": "This Smartphone's Battery lasts 94 Days!",
+    "frames_analyzed": 6,
+    "frames_with_brand": 1,
+    "model_error_or_raw_frames": 4,
+    "predicted_brands": [
+      "Apple"
+    ],
+    "report_path": "data/frames/This Smartphone's Battery lasts 94 Days!/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/hU5gUzQa3gc",
+    "status": "ok",
+    "title": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frames_analyzed": 22,
+    "frames_with_brand": 3,
+    "model_error_or_raw_frames": 10,
+    "predicted_brands": [
+      "Ollie",
+      "\u0160KODA",
+      "CARLY",
+      "OPPO"
+    ],
+    "report_path": "data/frames/The best phone of 2025\uff1f OPPO Find X9 Pro.../brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/QUatcTjH7hM",
+    "status": "ok",
+    "title": "The Cheapest Smartphone From Amazon",
+    "frames_analyzed": 10,
+    "frames_with_brand": 3,
+    "model_error_or_raw_frames": 6,
+    "predicted_brands": [
+      "Champion",
+      "Coca Cola",
+      "Coca-Cola"
+    ],
+    "report_path": "data/frames/The Cheapest Smartphone From Amazon/brand_intelligence_report.json"
+  },
+  {
+    "url": "https://www.youtube.com/shorts/9HdcgDUsyk8",
+    "status": "ok",
+    "title": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frames_analyzed": 2,
+    "frames_with_brand": 2,
+    "model_error_or_raw_frames": 0,
+    "predicted_brands": [
+      "Chosen Foods",
+      "10 Pure Avocado Oil"
+    ],
+    "report_path": "data/frames/The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang/brand_intelligence_report.json"
+  }
+]

@@ -1,0 +1,19 @@
+url	status	title	frames_analyzed	frames_with_brand	model_error_or_raw_frames	predicted_brands	report_path
+https://www.youtube.com/shorts/1UsG1q0l5bE	ok	The Ultimate Pizza Rolls Hack #shorts	5	0	2	[]	data/frames/The Ultimate Pizza Rolls Hack #shorts/brand_intelligence_report.json
+https://youtube.com/shorts/nE47x5rglms?si=s6m7oPtB5H6VXODd	ok	Deliciously Simple Pizza Rolls Recipe!	6	0	5	[]	data/frames/Deliciously Simple Pizza Rolls Recipe!/brand_intelligence_report.json
+https://youtube.com/shorts/XzgABELJTpQ?si=dFYPuYWzFv3KdLbn	ok	Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer	5	0	2	[]	data/frames/Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer/brand_intelligence_report.json
+https://www.youtube.com/shorts/aFJCXdySX0I	ok	How to Upgrade Pizza Rolls	3	1	1	['allrecipes']	data/frames/How to Upgrade Pizza Rolls/brand_intelligence_report.json
+https://www.youtube.com/shorts/H-Wjid0mLaM	ok	Bacon Wrapped Pizza Rolls 🔥 Recipe in Description 👍	4	0	3	[]	data/frames/Bacon Wrapped Pizza Rolls 🔥 Recipe in Description 👍/brand_intelligence_report.json
+https://www.youtube.com/shorts/BDykCT0k9eQ	retry_merged_ok	5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!	6	2	4	"['DREO', ""Totino's""]"	data/frames/5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!/brand_intelligence_report.json
+https://www.youtube.com/shorts/CMW4kgd--JI	ok	Pizza Rolls 🍕 #recipe #food #pizza #pizzarolls	8	0	6	[]	data/frames/Pizza Rolls 🍕 #recipe #food #pizza #pizzarolls/brand_intelligence_report.json
+https://www.youtube.com/shorts/Df9JJE88GqE	ok	Pizza Rolls	9	2	0	['Pillsbury', 'Great Value', 'Hormel']	data/frames/Pizza Rolls/brand_intelligence_report.json
+https://www.youtube.com/shorts/EBmYohVJ-Tg	ok	Homemade pizza rolls	8	0	4	[]	data/frames/Homemade pizza rolls/brand_intelligence_report.json
+https://www.youtube.com/shorts/GBim8bTa68U	ok	Homemade Pizza Rolls ｜ quick and easy!	8	0	5	[]	data/frames/Homemade Pizza Rolls ｜ quick and easy!/brand_intelligence_report.json
+https://www.youtube.com/shorts/g0lGmoNJQT4	ok	Beef Wellington but make it a cheeseburger 🍔🍔	4	0	3	[]	data/frames/Beef Wellington but make it a cheeseburger 🍔🍔/brand_intelligence_report.json
+https://www.youtube.com/shorts/4eD2QwVN60M	ok	Giada De Laurentiis’ Favorite Pizza Rolls!	11	1	5	['Wolf']	data/frames/Giada De Laurentiis’ Favorite Pizza Rolls!/brand_intelligence_report.json
+https://www.youtube.com/shorts/3aY6GAjOCC0	ok	The Best Rugged Phone？	19	2	10	['ulefone']	data/frames/The Best Rugged Phone？/brand_intelligence_report.json
+https://www.youtube.com/shorts/gJaJRh6DJgQ	ok	The Best Budget Phone for Everyday Use  Review and Gaming Performance	4	1	3	['Spotify']	data/frames/The Best Budget Phone for Everyday Use  Review and Gaming Performance/brand_intelligence_report.json
+https://www.youtube.com/shorts/l3ujdTrbD6w	ok	This Smartphone's Battery lasts 94 Days!	6	1	4	['Apple']	data/frames/This Smartphone's Battery lasts 94 Days!/brand_intelligence_report.json
+https://www.youtube.com/shorts/hU5gUzQa3gc	ok	The best phone of 2025？ OPPO Find X9 Pro...	22	3	10	['Ollie', 'ŠKODA', 'CARLY', 'OPPO']	data/frames/The best phone of 2025？ OPPO Find X9 Pro.../brand_intelligence_report.json
+https://www.youtube.com/shorts/QUatcTjH7hM	ok	The Cheapest Smartphone From Amazon	10	3	6	['Champion', 'Coca Cola', 'Coca-Cola']	data/frames/The Cheapest Smartphone From Amazon/brand_intelligence_report.json
+https://www.youtube.com/shorts/9HdcgDUsyk8	ok	The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang	2	2	0	['Chosen Foods', '10 Pure Avocado Oil']	data/frames/The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang/brand_intelligence_report.json

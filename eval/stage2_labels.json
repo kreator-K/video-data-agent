@@ -1,0 +1,362 @@
+[
+  {
+    "source_url": "https://www.youtube.com/shorts/1UsG1q0l5bE",
+    "video_id": "The Ultimate Pizza Rolls Hack #shorts",
+    "frame_id": "frame_0006.jpg",
+    "frame_path": "data/frames/The Ultimate Pizza Rolls Hack #shorts/frame_0006.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "similar_object",
+    "notes": "Food preparation close-up; no readable brand or logo."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/1UsG1q0l5bE",
+    "video_id": "The Ultimate Pizza Rolls Hack #shorts",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/The Ultimate Pizza Rolls Hack #shorts/frame_0000.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Finished food on tray; no visible brand."
+  },
+  {
+    "source_url": "https://youtube.com/shorts/nE47x5rglms?si=s6m7oPtB5H6VXODd",
+    "video_id": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame_id": "frame_0009.jpg",
+    "frame_path": "data/frames/Deliciously Simple Pizza Rolls Recipe!/frame_0009.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Dough rolling process; no brand visible."
+  },
+  {
+    "source_url": "https://youtube.com/shorts/nE47x5rglms?si=s6m7oPtB5H6VXODd",
+    "video_id": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/Deliciously Simple Pizza Rolls Recipe!/frame_0000.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "similar_object",
+    "notes": "Finished food could invite product assumptions, but no logo is visible."
+  },
+  {
+    "source_url": "https://youtube.com/shorts/XzgABELJTpQ?si=dFYPuYWzFv3KdLbn",
+    "video_id": "Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer",
+    "frame_id": "frame_0006.jpg",
+    "frame_path": "data/frames/Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer/frame_0006.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Ingredient assembly frame; no readable brand."
+  },
+  {
+    "source_url": "https://youtube.com/shorts/XzgABELJTpQ?si=dFYPuYWzFv3KdLbn",
+    "video_id": "Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer/frame_0000.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "similar_object",
+    "notes": "Close-up of finished food; no logo visible."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/aFJCXdySX0I",
+    "video_id": "How to Upgrade Pizza Rolls",
+    "frame_id": "frame_0006.jpg",
+    "frame_path": "data/frames/How to Upgrade Pizza Rolls/frame_0006.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Allrecipes"],
+    "visibility_condition": "clear",
+    "notes": "Allrecipes watermark is clearly visible in the upper-right corner."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/aFJCXdySX0I",
+    "video_id": "How to Upgrade Pizza Rolls",
+    "frame_id": "frame_0003.jpg",
+    "frame_path": "data/frames/How to Upgrade Pizza Rolls/frame_0003.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Cooking pan/ingredient frame; no readable brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/H-Wjid0mLaM",
+    "video_id": "Bacon Wrapped Pizza Rolls 🔥 Recipe in Description 👍",
+    "frame_id": "frame_0006.jpg",
+    "frame_path": "data/frames/Bacon Wrapped Pizza Rolls 🔥 Recipe in Description 👍/frame_0006.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "partial",
+    "notes": "Grill scene with possible hardware details, but no readable brand/logo."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/H-Wjid0mLaM",
+    "video_id": "Bacon Wrapped Pizza Rolls 🔥 Recipe in Description 👍",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/Bacon Wrapped Pizza Rolls 🔥 Recipe in Description 👍/frame_0000.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Food-prep frame; no readable brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/BDykCT0k9eQ",
+    "video_id": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame_id": "frame_0003.jpg",
+    "frame_path": "data/frames/5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!/frame_0003.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["DREO"],
+    "visibility_condition": "clear",
+    "notes": "DREO logo is clearly visible on the air fryer."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/BDykCT0k9eQ",
+    "video_id": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame_id": "frame_0009.jpg",
+    "frame_path": "data/frames/5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!/frame_0009.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Food in pan; no readable brand/logo."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/CMW4kgd--JI",
+    "video_id": "Pizza Rolls 🍕 #recipe #food #pizza #pizzarolls",
+    "frame_id": "frame_0012.jpg",
+    "frame_path": "data/frames/Pizza Rolls 🍕 #recipe #food #pizza #pizzarolls/frame_0012.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Pepperoni and sauce on dough; no visible brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/CMW4kgd--JI",
+    "video_id": "Pizza Rolls 🍕 #recipe #food #pizza #pizzarolls",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/Pizza Rolls 🍕 #recipe #food #pizza #pizzarolls/frame_0000.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Overhead prep shot; no logo visible."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/Df9JJE88GqE",
+    "video_id": "Pizza Rolls",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/Pizza Rolls/frame_0000.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Pillsbury"],
+    "visibility_condition": "clear",
+    "notes": "Pillsbury pizza crust tube is visible and readable."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/Df9JJE88GqE",
+    "video_id": "Pizza Rolls",
+    "frame_id": "frame_0012.jpg",
+    "frame_path": "data/frames/Pizza Rolls/frame_0012.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Dough rolling frame; no readable brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/EBmYohVJ-Tg",
+    "video_id": "Homemade pizza rolls",
+    "frame_id": "frame_0012.jpg",
+    "frame_path": "data/frames/Homemade pizza rolls/frame_0012.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "similar_object",
+    "notes": "Fried food close-up; no brand/logo."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/EBmYohVJ-Tg",
+    "video_id": "Homemade pizza rolls",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/Homemade pizza rolls/frame_0000.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Plated food and sauce; no brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/GBim8bTa68U",
+    "video_id": "Homemade Pizza Rolls ｜ quick and easy!",
+    "frame_id": "frame_0012.jpg",
+    "frame_path": "data/frames/Homemade Pizza Rolls ｜ quick and easy!/frame_0012.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Creator and drink are visible, but no readable brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/GBim8bTa68U",
+    "video_id": "Homemade Pizza Rolls ｜ quick and easy!",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/Homemade Pizza Rolls ｜ quick and easy!/frame_0000.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Creator with plate of food; no brand visible."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/g0lGmoNJQT4",
+    "video_id": "Beef Wellington but make it a cheeseburger 🍔🍔",
+    "frame_id": "frame_0006.jpg",
+    "frame_path": "data/frames/Beef Wellington but make it a cheeseburger 🍔🍔/frame_0006.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Food prep with brush; no visible brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/g0lGmoNJQT4",
+    "video_id": "Beef Wellington but make it a cheeseburger 🍔🍔",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/Beef Wellington but make it a cheeseburger 🍔🍔/frame_0000.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "unclear",
+    "notes": "Background text/signage is present but not clearly a brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/4eD2QwVN60M",
+    "video_id": "Giada De Laurentiis’ Favorite Pizza Rolls!",
+    "frame_id": "frame_0015.jpg",
+    "frame_path": "data/frames/Giada De Laurentiis’ Favorite Pizza Rolls!/frame_0015.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "similar_object",
+    "notes": "Kitchen appliances are visible, but no readable Wolf/Sub-Zero/Viking logo."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/4eD2QwVN60M",
+    "video_id": "Giada De Laurentiis’ Favorite Pizza Rolls!",
+    "frame_id": "frame_0018.jpg",
+    "frame_path": "data/frames/Giada De Laurentiis’ Favorite Pizza Rolls!/frame_0018.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Cooking action frame with no readable brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/3aY6GAjOCC0",
+    "video_id": "The Best Rugged Phone？",
+    "frame_id": "frame_0018.jpg",
+    "frame_path": "data/frames/The Best Rugged Phone？/frame_0018.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Ulefone"],
+    "visibility_condition": "partial",
+    "notes": "Small Ulefone mark is visible on the phone back."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/3aY6GAjOCC0",
+    "video_id": "The Best Rugged Phone？",
+    "frame_id": "frame_0030.jpg",
+    "frame_path": "data/frames/The Best Rugged Phone？/frame_0030.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "unclear",
+    "notes": "Phone is being handled, but no readable logo/brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/gJaJRh6DJgQ",
+    "video_id": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/The Best Budget Phone for Everyday Use  Review and Gaming Performance/frame_0000.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Spotify"],
+    "visibility_condition": "clear",
+    "notes": "Spotify app icon is visible on the phone screen."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/gJaJRh6DJgQ",
+    "video_id": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frame_id": "frame_0006.jpg",
+    "frame_path": "data/frames/The Best Budget Phone for Everyday Use  Review and Gaming Performance/frame_0006.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "none",
+    "notes": "Presenter shot with no readable brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/l3ujdTrbD6w",
+    "video_id": "This Smartphone's Battery lasts 94 Days!",
+    "frame_id": "frame_0006.jpg",
+    "frame_path": "data/frames/This Smartphone's Battery lasts 94 Days!/frame_0006.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Apple"],
+    "visibility_condition": "partial",
+    "notes": "Apple logo is visible on one phone, though not the main subject."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/l3ujdTrbD6w",
+    "video_id": "This Smartphone's Battery lasts 94 Days!",
+    "frame_id": "frame_0009.jpg",
+    "frame_path": "data/frames/This Smartphone's Battery lasts 94 Days!/frame_0009.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["YouTube"],
+    "visibility_condition": "clear",
+    "notes": "YouTube text is visible on the comparison graphic."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/hU5gUzQa3gc",
+    "video_id": "The best phone of 2025？ OPPO Find X9 Pro...",
+    "frame_id": "frame_0045.jpg",
+    "frame_path": "data/frames/The best phone of 2025？ OPPO Find X9 Pro.../frame_0045.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Ollie", "ŠKODA"],
+    "visibility_condition": "blurry",
+    "notes": "Presentation slide contains visible but small/blurry Ollie and ŠKODA branding."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/hU5gUzQa3gc",
+    "video_id": "The best phone of 2025？ OPPO Find X9 Pro...",
+    "frame_id": "frame_0027.jpg",
+    "frame_path": "data/frames/The best phone of 2025？ OPPO Find X9 Pro.../frame_0027.jpg",
+    "ground_truth_brand_visible": false,
+    "brands_actually_visible": [],
+    "visibility_condition": "unclear",
+    "notes": "Partial shirt text is visible but not a confirmed brand."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/QUatcTjH7hM",
+    "video_id": "The Cheapest Smartphone From Amazon",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0000.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Champion"],
+    "visibility_condition": "low_light",
+    "notes": "Champion hoodie logo is visible in warm indoor lighting."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/QUatcTjH7hM",
+    "video_id": "The Cheapest Smartphone From Amazon",
+    "frame_id": "frame_0015.jpg",
+    "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Champion", "Coca-Cola"],
+    "visibility_condition": "low_light",
+    "notes": "Coca-Cola hat and Champion hoodie are visible, but both are secondary to the phone unboxing."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/9HdcgDUsyk8",
+    "video_id": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame_id": "frame_0000.jpg",
+    "frame_path": "data/frames/The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang/frame_0000.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Chosen Foods"],
+    "visibility_condition": "partial",
+    "notes": "Chosen Foods bottle is visible near the top of the frame."
+  },
+  {
+    "source_url": "https://www.youtube.com/shorts/9HdcgDUsyk8",
+    "video_id": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame_id": "frame_0003.jpg",
+    "frame_path": "data/frames/The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang/frame_0003.jpg",
+    "ground_truth_brand_visible": true,
+    "brands_actually_visible": ["Chosen Foods"],
+    "visibility_condition": "clear",
+    "notes": "Chosen Foods labels are visible on two bottles."
+  }
+]
