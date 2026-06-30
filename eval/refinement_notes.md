@@ -55,6 +55,24 @@ F1 Score:  0.81
 5. Re-run the 36-frame eval after each parser or prompt change and compare
    precision, recall, and F1.
 
+## Stage 3 Applied
+
+Applied lightweight refinements:
+
+- Parse fenced/prose-wrapped JSON.
+- Normalize brand aliases.
+- Filter obvious product descriptors.
+- Promote high-signal visible text such as `YouTube`.
+
+Result on the same Stage 2 labels:
+
+```text
+Baseline F1: 0.81
+Refined F1:  0.90
+```
+
+Full comparison: `eval/stage3_comparison.md`
+
 ## Instructions Not Used Yet
 
 - Bounding boxes/localization were not added because the current pipeline only

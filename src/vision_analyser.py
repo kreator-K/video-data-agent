@@ -2,6 +2,7 @@ import openai
 import base64
 import json
 import os
+import re
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -14,6 +15,30 @@ def encode_image(image_path: str) -> str:
     """Converts an image file to base64 string for API transmission."""
     with open(image_path, "rb") as f:
         return base64.b64encode(f.read()).decode("utf-8")
+
+
+def parse_json_response(raw: str) -> dict:
+    """
+    Parse strict JSON, fenced JSON, or prose that contains one JSON object.
+    """
+    text = raw.strip()
+
+    if "```" in text:
+        fenced = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
+        if fenced:
+            text = fenced.group(1).strip()
+
+    try:
+        return json.loads(text)
+    except json.JSONDecodeError:
+        pass
+
+    start = text.find("{")
+    end = text.rfind("}")
+    if start != -1 and end != -1 and end > start:
+        return json.loads(text[start:end + 1])
+
+    raise json.JSONDecodeError("No JSON object found", raw, 0)
 
 
 def analyse_frame(image_path: str) -> dict:
@@ -35,12 +60,12 @@ Return a JSON object with exactly these fields:
 - setting: where this takes place (kitchen, outdoor, studio, etc.)
 - mood: visual mood (warm, bright, dark, energetic, calm, etc.)
 - actions: what is happening in this frame
-- brands: list of any visible brand names or logos (empty list if none)
+- brands: list of any visible brand names, logos, app icons, watermarks, or packaging brands (empty list if none)
 - products: list of visible products or food items
 - text_visible: any text or captions visible on screen
 - people_count: number of people visible
 
-Return ONLY valid JSON. No explanation, no markdown, just JSON."""
+Return ONLY valid JSON. No explanation, no markdown, just JSON. Do not infer a brand from product category, package shape, appliance shape, or colors alone."""
                     },
                     {
                         "type": "image_url",
@@ -76,7 +101,7 @@ Return ONLY valid JSON. No explanation, no markdown, just JSON."""
 
     if raw.strip():
         try:
-            return json.loads(raw)
+            return parse_json_response(raw)
         except json.JSONDecodeError:
             return {"raw_response": raw}
 

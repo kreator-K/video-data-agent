@@ -209,10 +209,20 @@ Recall:    0.79
 F1 Score:  0.81
 ```
 
-Known failure patterns and the next refinement loop are tracked in:
+Stage 3 applies parser, alias-normalization, and lightweight verification
+refinements on the same labeled frames:
+
+```text
+Precision: 0.87
+Recall:    0.93
+F1 Score:  0.90
+```
+
+Known failure patterns and the refinement comparison are tracked in:
 
 ```text
 eval/stage2_failure_report.md
+eval/stage3_comparison.md
 ```
 
 ## Project Structure

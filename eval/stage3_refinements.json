@@ -1,0 +1,191 @@
+[
+  {
+    "video_id": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame_id": "frame_0000.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frame_id": "frame_0006.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [
+      "gravity series"
+    ],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frame_id": "frame_0000.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame_id": "frame_0012.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame_id": "frame_0000.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Homemade pizza rolls",
+    "frame_id": "frame_0012.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Homemade pizza rolls",
+    "frame_id": "frame_0000.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frame_id": "frame_0000.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Beef Wellington but make it a cheeseburger \ud83c\udf54\ud83c\udf54",
+    "frame_id": "frame_0006.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame_id": "frame_0018.jpg",
+    "ground_truth": [],
+    "baseline_prediction": [],
+    "refined_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "This Smartphone's Battery lasts 94 Days!",
+    "frame_id": "frame_0009.jpg",
+    "ground_truth": [
+      "youtube"
+    ],
+    "baseline_prediction": [],
+    "refined_prediction": [
+      "youtube"
+    ],
+    "refinement_notes": [
+      "parsed_embedded_json",
+      "text_visible_brand:youtube"
+    ],
+    "refinement_category": [
+      "parser_refinement",
+      "prompt_or_text_extraction_refinement"
+    ]
+  },
+  {
+    "video_id": "The Cheapest Smartphone From Amazon",
+    "frame_id": "frame_0015.jpg",
+    "ground_truth": [
+      "champion",
+      "coca-cola"
+    ],
+    "baseline_prediction": [],
+    "refined_prediction": [
+      "champion"
+    ],
+    "refinement_notes": [
+      "parsed_embedded_json"
+    ],
+    "refinement_category": [
+      "parser_refinement"
+    ]
+  },
+  {
+    "video_id": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame_id": "frame_0003.jpg",
+    "ground_truth": [
+      "chosen foods"
+    ],
+    "baseline_prediction": [
+      "10 pure avocado oil",
+      "chosen foods"
+    ],
+    "refined_prediction": [
+      "chosen foods"
+    ],
+    "refinement_notes": [
+      "filtered_product_descriptor:10 pure avocado oil"
+    ],
+    "refinement_category": [
+      "negative_verification"
+    ]
+  }
+]
