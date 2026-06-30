@@ -1,68 +1,87 @@
-# video-data-agent
+# Video Data Agent
 
-Multimodal AI agent that extracts brand intelligence from short-form videos.
+**A multimodal AI agent that extracts brand intelligence from short-form video.**
 
-The pipeline downloads a YouTube video, decodes frames, transcribes the audio,
-analyzes sampled frames with a vision model, and synthesizes everything into a
-brand intelligence report.
+Brands spend $800-1500/month on tools like Brandwatch or Sprout Social to track
+text mentions, but those tools do not understand what is happening inside a
+video. This agent watches a video the way a brand manager would: it reads the
+visuals, listens to the audio, and writes a structured intelligence report.
 
-## What It Produces
+Paste a YouTube URL. Get a brand report in under 60 seconds.
 
-For each video, the agent creates:
-
-- Downloaded video and metadata in `data/videos/`
-- Timestamped transcript in `data/videos/*.transcript.json`
-- Decoded video frames in `data/frames/<video-name>/`
-- Frame-level visual analysis in `vision_analysis.json`
-- Final brand report in `brand_intelligence_report.json`
-
-The terminal also prints a report view like this:
-
-```text
-==================================================
-   BRAND INTELLIGENCE REPORT
-==================================================
-
-Video:    <video title>
-Channel:  <channel name>
-Views:    <view count>
-
-Summary:
-<short summary>
-
-Primary Brands: [...]
-
-Brand Manager Actions:
-  1. ...
-  2. ...
-  3. ...
-
-Positioning Gap:
-...
-
-Full report saved to: data/frames/<video-name>/brand_intelligence_report.json
-==================================================
+```bash
+python main.py "https://youtube.com/shorts/..."
 ```
 
-## Project Structure
+## Example Output
+
+Run on a cooking video with millions of views:
+
+```json
+{
+  "video_summary": "A short cooking video showcasing a one-pan coconut red curry pasta recipe with chicken.",
+  "primary_brands": ["Chi", "Coca-Cola"],
+  "brand_context": {
+    "Chi": {
+      "positive": true,
+      "context": "product placement in a cooking video"
+    },
+    "Coca-Cola": {
+      "positive": false,
+      "context": "product placement in a cooking video, but not a central focus"
+    }
+  },
+  "brand_manager_actions": [
+    "Consider partnering with Chi for future product placements to reach a young adult audience interested in cooking.",
+    "Monitor the use of Coca-Cola in the video and assess its relevance to the brand's marketing strategy.",
+    "Analyze the content's engagement signals to determine the effectiveness of the video in reaching its target audience."
+  ],
+  "positioning_gap": "The video could benefit from more detailed information about the recipe, such as ingredient quantities and cooking times, to make it more useful for viewers."
+}
+```
+
+Full sample: [`docs/sample_output/sample_report.json`](docs/sample_output/sample_report.json)
+
+## How It Works
 
 ```text
-main.py                     # Runs the full pipeline
-src/downloader.py           # Downloads videos and metadata with yt-dlp
-src/frame_extractor.py      # Decodes video frames with OpenCV
-src/transcriber.py          # Transcribes audio with Whisper
-src/vision_analyser.py      # Analyzes video frames with OpenAI vision
-src/synthesiser.py          # Builds the final brand intelligence report
-docs/sample_output/         # Example output report
+YouTube URL
+    |
+    |-> downloader.py        -> video + metadata (yt-dlp)
+    |
+    |-> frame_extractor.py   -> keyframes every 2s (OpenCV)
+    |
+    |-> transcriber.py       -> timestamped transcript (Whisper, local)
+    |
+    |-> vision_analyser.py   -> per-frame brand detection (OpenAI vision)
+    |
+    `-> synthesiser.py       -> brand intelligence report (Llama 3.1 via Nvidia NIM)
 ```
+
+Each module runs independently and can be tested standalone, or chained together
+through `main.py` for a single end-to-end run.
+
+## Stack
+
+| Layer | Tool |
+| --- | --- |
+| Video download | yt-dlp |
+| Frame extraction | OpenCV |
+| Transcription | OpenAI Whisper, local |
+| Vision analysis | OpenAI vision model |
+| Synthesis | Meta Llama 3.1 8B via Nvidia NIM |
+
+Whisper runs locally, so transcription does not add API cost. The synthesis step
+uses Nvidia's hosted API tier. The vision layer currently uses OpenAI and can be
+swapped for a hosted vision model if cost or deployment constraints change.
 
 ## Setup
 
-Create and activate a local Python environment:
+Create and activate a Conda environment:
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
+conda create -n video-agent python=3.11
+conda activate video-agent
 ```
 
 Install dependencies:
@@ -71,74 +90,55 @@ Install dependencies:
 pip install -r requirements.txt openai opencv-python openai-whisper
 ```
 
-Make sure FFmpeg is installed:
+Install FFmpeg:
 
 ```bash
-ffmpeg -version
+brew install ffmpeg
 ```
 
-Create a `.env` file in the project root:
+Create `.env` in the project root:
 
-```bash
+```text
 OPENAI_API_KEY=your_openai_key_here
 NVIDIA_API_KEY=your_nvidia_key_here
 ```
 
-`OPENAI_API_KEY` is used for frame analysis. `NVIDIA_API_KEY` is used by the
-current synthesis step.
+`OPENAI_API_KEY` powers frame-level vision analysis. `NVIDIA_API_KEY` powers
+the final text synthesis step.
 
-## Run The Agent
-
-From the project folder:
+## Run
 
 ```bash
-source .venv/bin/activate
-python main.py "https://youtube.com/shorts/RnGw1oFcD0I?si=GT_fHjTaYFCiV8TF"
+conda activate video-agent
+python main.py "https://youtube.com/shorts/your-video-id"
 ```
 
-You can replace the URL with any supported YouTube or YouTube Shorts URL.
+Outputs land in:
 
-## Get Back To The Report View
+- `data/videos/` - video file, metadata, and transcript
+- `data/frames/<video-name>/` - extracted frames, vision analysis, and final report
 
-The visual report in the terminal appears at the end of a full pipeline run.
+The terminal prints the brand intelligence report at the end of each full run.
 
-To see that view again for a new video, run:
+## Known Limitations
 
-```bash
-source .venv/bin/activate
-python main.py "<youtube-url>"
-```
+- Vision responses can occasionally return malformed JSON or incomplete fields;
+  the pipeline preserves raw responses rather than failing silently.
+- Transcription accuracy drops on videos with loud background music and minimal
+  speech.
+- The pipeline samples every 3rd extracted frame for vision analysis to manage
+  API cost and runtime.
+- YouTube extraction can change over time; update `yt-dlp` if downloads start
+  failing.
 
-To inspect a saved report without rerunning the full pipeline:
-
-```bash
-cat "data/frames/<video-name>/brand_intelligence_report.json"
-```
-
-Example:
-
-```bash
-cat "data/frames/A new era of pizza #cooking #recipe #foodasmr #food/brand_intelligence_report.json"
-```
-
-## Sample Output
-
-A sample report is available at:
+## Project Structure
 
 ```text
-docs/sample_output/sample_report.json
+main.py                     # Orchestrates the full pipeline
+src/downloader.py           # Video + metadata download
+src/frame_extractor.py      # Frame extraction
+src/transcriber.py          # Audio transcription
+src/vision_analyser.py      # Per-frame vision analysis
+src/synthesiser.py          # Final report generation
+docs/sample_output/         # Example report
 ```
-
-View it with:
-
-```bash
-cat docs/sample_output/sample_report.json
-```
-
-## Notes
-
-- `data/` is ignored by Git because videos, frames, transcripts, and generated
-  reports can become large.
-- `.venv/` is ignored by Git so local dependencies stay out of the repository.
-- If YouTube extraction warns about JavaScript runtimes, the download may still
-  work. If it fails, update `yt-dlp` or install a supported JavaScript runtime.
