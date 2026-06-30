@@ -1,0 +1,27 @@
+[
+  {
+    "frame": "frame_0000.jpg",
+    "video": "Real vs Knockoff Pizza Rolls",
+    "brands_actually_visible": []
+  },
+  {
+    "frame": "frame_0003.jpg",
+    "video": "Real vs Knockoff Pizza Rolls",
+    "brands_actually_visible": ["Totino's"]
+  },
+  {
+    "frame": "frame_0009.jpg",
+    "video": "Real vs Knockoff Pizza Rolls",
+    "brands_actually_visible": []
+  },
+  {
+    "frame": "frame_0012.jpg",
+    "video": "Real vs Knockoff Pizza Rolls",
+    "brands_actually_visible": []
+  },
+  {
+    "frame": "frame_0018.jpg",
+    "video": "Real vs Knockoff Pizza Rolls",
+    "brands_actually_visible": []
+  }
+]

@@ -1,0 +1,65 @@
+{
+  "dataset_size": 5,
+  "true_positives": 1,
+  "false_positives": 0,
+  "false_negatives": 0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1_score": 1.0,
+  "frames": [
+    {
+      "video": "Real vs Knockoff Pizza Rolls",
+      "frame": "frame_0000.jpg",
+      "actual_brands": [],
+      "predicted_brands": [],
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "status": "PASS"
+    },
+    {
+      "video": "Real vs Knockoff Pizza Rolls",
+      "frame": "frame_0003.jpg",
+      "actual_brands": [
+        "totino's"
+      ],
+      "predicted_brands": [
+        "totino's"
+      ],
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "status": "PASS"
+    },
+    {
+      "video": "Real vs Knockoff Pizza Rolls",
+      "frame": "frame_0009.jpg",
+      "actual_brands": [],
+      "predicted_brands": [],
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "status": "PASS"
+    },
+    {
+      "video": "Real vs Knockoff Pizza Rolls",
+      "frame": "frame_0012.jpg",
+      "actual_brands": [],
+      "predicted_brands": [],
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "status": "PASS"
+    },
+    {
+      "video": "Real vs Knockoff Pizza Rolls",
+      "frame": "frame_0018.jpg",
+      "actual_brands": [],
+      "predicted_brands": [],
+      "true_positives": 0,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "status": "PASS"
+    }
+  ]
+}

@@ -120,6 +120,48 @@ Outputs land in:
 
 The terminal prints the brand intelligence report at the end of each full run.
 
+## Batch Run
+
+Put URLs in a text file:
+
+```text
+https://youtube.com/shorts/video-1
+https://youtube.com/shorts/video-2
+https://youtube.com/shorts/video-3
+```
+
+Run the batch:
+
+```bash
+python run_batch.py --file urls.txt
+```
+
+You can also paste URLs through stdin:
+
+```bash
+pbpaste | python run_batch.py --stdin
+```
+
+Or pass URLs directly:
+
+```bash
+python run_batch.py "https://youtube.com/shorts/video-1" "https://youtube.com/shorts/video-2"
+```
+
+By default, duplicate URLs are skipped and one failed URL does not stop the
+batch. Per-video logs and summary files are saved to:
+
+```text
+data/batch_runs/<timestamp>/
+```
+
+Useful options:
+
+- `--dry-run` - print the URLs that would run without processing videos
+- `--no-dedupe` - process duplicate URLs instead of skipping repeats
+- `--stop-on-error` - stop the batch after the first failed URL
+- `--log-dir <path>` - choose where logs and summaries are written
+
 ## Known Limitations
 
 - Vision responses can occasionally return malformed JSON or incomplete fields;
@@ -131,14 +173,43 @@ The terminal prints the brand intelligence report at the end of each full run.
 - YouTube extraction can change over time; update `yt-dlp` if downloads start
   failing.
 
+## Model Evaluation
+
+The repo includes a small golden dataset for checking frame-level brand
+detection against manually labeled ground truth.
+
+Run the eval:
+
+```bash
+python eval/run_eval.py
+```
+
+The current eval uses 5 hand-labeled frames from `Real vs Knockoff Pizza Rolls`
+and compares `brands_actually_visible` against the model output in
+`vision_analysis.json`.
+
+Metrics reported:
+
+- Precision - of the brands the model claimed were visible, how many were right
+- Recall - of the brands actually visible, how many the model found
+- F1 score - single-number balance of precision and recall
+
+Results are saved to:
+
+```text
+eval/eval_results.json
+```
+
 ## Project Structure
 
 ```text
 main.py                     # Orchestrates the full pipeline
+run_batch.py                # Batch runner for URL lists
 src/downloader.py           # Video + metadata download
 src/frame_extractor.py      # Frame extraction
 src/transcriber.py          # Audio transcription
 src/vision_analyser.py      # Per-frame vision analysis
 src/synthesiser.py          # Final report generation
 docs/sample_output/         # Example report
+eval/                       # Golden dataset and model evaluation script
 ```
