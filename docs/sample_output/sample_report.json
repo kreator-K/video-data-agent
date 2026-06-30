@@ -1,0 +1,34 @@
+{
+  "video_summary": "A short cooking video showcasing a one-pan coconut red curry pasta recipe with chicken.",
+  "primary_brands": [
+    "Chi",
+    "Coca-Cola"
+  ],
+  "brand_context": {
+    "Chi": {
+      "positive": true,
+      "context": "product placement in a cooking video"
+    },
+    "Coca-Cola": {
+      "positive": false,
+      "context": "product placement in a cooking video, but not a central focus"
+    }
+  },
+  "visual_themes": {
+    "setting": "kitchen",
+    "mood": "warm",
+    "aesthetic": "cozy"
+  },
+  "content_category": "tutorial",
+  "target_audience": "young adults interested in cooking and food",
+  "engagement_signals": {
+    "views": 21473550,
+    "likes": 271256
+  },
+  "brand_manager_actions": [
+    "Consider partnering with Chi for future product placements to reach a young adult audience interested in cooking.",
+    "Monitor the use of Coca-Cola in the video and assess its relevance to the brand's marketing strategy.",
+    "Analyze the content's engagement signals to determine the effectiveness of the video in reaching its target audience."
+  ],
+  "positioning_gap": "The video could benefit from more detailed information about the recipe, such as ingredient quantities and cooking times, to make it more useful for viewers."
+}
