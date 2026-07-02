@@ -1,14 +1,25 @@
 import openai
 import base64
 import json
-import os
 import re
 from pathlib import Path
 from dotenv import load_dotenv
+from src.model_config import vision_api_key, vision_base_url, vision_model
 
 # Load API keys from .env file
 load_dotenv()
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+
+def build_client() -> openai.OpenAI:
+    base_url = vision_base_url()
+    kwargs = {"api_key": vision_api_key()}
+    if base_url:
+        kwargs["base_url"] = base_url
+    return openai.OpenAI(**kwargs)
+
+
+client = build_client()
+NO_VISIBLE_BRAND_MESSAGE = "No visible brand, company, shop, restaurant, or firm name detected."
 
 
 def encode_image(image_path: str) -> str:
@@ -29,38 +40,76 @@ def parse_json_response(raw: str) -> dict:
             text = fenced.group(1).strip()
 
     try:
-        return json.loads(text)
+        parsed = json.loads(text)
+        if not isinstance(parsed, dict):
+            raise json.JSONDecodeError("Expected JSON object", text, 0)
+        parsed.setdefault("brands", [])
+        return parsed
     except json.JSONDecodeError:
         pass
 
     start = text.find("{")
     end = text.rfind("}")
     if start != -1 and end != -1 and end > start:
-        return json.loads(text[start:end + 1])
+        parsed = json.loads(text[start:end + 1])
+        if not isinstance(parsed, dict):
+            raise json.JSONDecodeError("Expected JSON object", text, 0)
+        parsed.setdefault("brands", [])
+        return parsed
 
     raise json.JSONDecodeError("No JSON object found", raw, 0)
 
 
+def add_brand_visibility_status(analysis: dict) -> dict:
+    """
+    Keep brands as a machine-readable list, and add a readable status for empty detections.
+    """
+    brands = analysis.get("brands", [])
+    if not isinstance(brands, list):
+        brands = []
+        analysis["brands"] = brands
+
+    clean_brands = [str(brand).strip() for brand in brands if str(brand).strip()]
+    analysis["brands"] = clean_brands
+    analysis["brand_visible"] = bool(clean_brands)
+    analysis["brand_visibility_note"] = (
+        f"Visible brand/name detected: {', '.join(clean_brands)}"
+        if clean_brands
+        else NO_VISIBLE_BRAND_MESSAGE
+    )
+    return analysis
+
+
 def analyse_frame(image_path: str) -> dict:
     """
-    Sends a single frame to GPT-4o and returns structured brand insights.
+    Sends a single frame to the configured vision model and returns structured brand insights.
     """
-    base64_image = encode_image(image_path)
+    path = Path(image_path)
+    if not path.exists():
+        return {"error": "missing_frame_file", "frame_path": image_path}
+    if path.stat().st_size == 0:
+        return {"error": "corrupted_image", "frame_path": image_path}
 
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=[
-            {
-                "role": "user",
-                "content": [
-                    {
-                        "type": "text",
-                        "text": """Analyse this video frame for brand intelligence. 
+    try:
+        base64_image = encode_image(image_path)
+    except OSError as exc:
+        return {"error": "image_read_error", "message": str(exc), "frame_path": image_path}
+
+    try:
+        response = client.chat.completions.create(
+            model=vision_model(),
+            messages=[
+                {
+                    "role": "user",
+                    "content": [
+                        {
+                            "type": "text",
+                            "text": """Analyse this video frame for brand intelligence. 
 Return a JSON object with exactly these fields:
 - setting: where this takes place (kitchen, outdoor, studio, etc.)
 - mood: visual mood (warm, bright, dark, energetic, calm, etc.)
 - actions: what is happening in this frame
-- brands: list of any readable visible brand names, logos, app icons, watermarks, or packaging brands, including secondary apparel/background placements (empty list if none)
+- brands: list of any readable visible brand, company, shop, restaurant, firm, creator watermark, app icon, logo, or packaging name, including secondary apparel/background placements (empty list if none)
 - products: list of visible products or food items
 - text_visible: any text or captions visible on screen
 - people_count: number of people visible
@@ -68,20 +117,23 @@ Return a JSON object with exactly these fields:
 Return ONLY valid JSON. No explanation, no markdown, just JSON.
 Do not infer a brand from product category, package shape, appliance shape, design cues, colors, or red knobs alone.
 Only include appliance, hardware, or product-line names in brands when a readable parent brand name or logo is visible.
+If no readable brand/company/shop/restaurant/firm name is visible, return brands as an empty list.
 If visible text looks like a model, series, slogan, or generic product descriptor rather than a parent brand, put it in text_visible or products instead of brands."""
-                    },
-                    {
-                        "type": "image_url",
-                        "image_url": {
-                            "url": f"data:image/jpeg;base64,{base64_image}",
-                            "detail": "low"
+                        },
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": f"data:image/jpeg;base64,{base64_image}",
+                                "detail": "low"
+                            }
                         }
-                    }
-                ]
-            }
-        ],
-        max_tokens=300
-    )
+                    ]
+                }
+            ],
+            max_tokens=300
+        )
+    except Exception as exc:
+        return {"error": "api_error", "message": str(exc)}
 
     choice = response.choices[0] if response.choices else None
     message = getattr(choice, "message", None)
@@ -103,8 +155,10 @@ If visible text looks like a model, series, slogan, or generic product descripto
         raw = "" if raw is None else str(raw)
 
     if raw.strip():
+        if "i'm sorry" in raw.lower() or "i can’t" in raw.lower() or "i can't" in raw.lower():
+            return {"error": "model_refusal", "raw_response": raw}
         try:
-            return parse_json_response(raw)
+            return add_brand_visibility_status(parse_json_response(raw))
         except json.JSONDecodeError:
             return {"raw_response": raw}
 

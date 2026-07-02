@@ -55,6 +55,9 @@ def run_pipeline(url: str):
     print(f"Channel:  {metadata.get('channel')}")
     print(f"Views:    {metadata.get('view_count'):,}")
     print(f"\nSummary:\n{report.get('video_summary')}")
+    print(f"\nBrand Presence:\n{report.get('brand_presence_summary')}")
+    print(f"\nBrand Visibility:\n{report.get('brand_visibility_summary')}")
+    print(f"\nBrand Evidence: {json.dumps(report.get('brand_evidence', {}), indent=2)}")
     print(f"\nPrimary Brands: {report.get('primary_brands')}")
     print(f"\nBrand Manager Actions:")
     for i, action in enumerate(report.get('brand_manager_actions', []), 1):

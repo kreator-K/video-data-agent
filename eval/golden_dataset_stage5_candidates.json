@@ -1,0 +1,3646 @@
+[
+  {
+    "video": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [
+      "DREO"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [
+      "Totino's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "5 Easy Recipes to enhance your Pizza rolls on the BIG GAME day!",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [
+      "Braum's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frame": "frame_0011.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Beef Wellington but make it a cheeseburger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Beef Wellington but make it a cheeseburger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Beef Wellington but make it a cheeseburger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Beef Wellington but make it a cheeseburger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Beef Wellington but make it a cheeseburger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0011.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Deliciously Simple Pizza Rolls Recipe!",
+    "frame": "frame_0016.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0015.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0026.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame": "frame_0030.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade Pizza Rolls \uff5c quick and easy!",
+    "frame": "frame_0023.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade pizza rolls",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Homemade pizza rolls",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [
+      "Nasoya"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Homemade pizza rolls",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade pizza rolls",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Homemade pizza rolls",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade pizza rolls",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Homemade pizza rolls",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How to Upgrade Pizza Rolls",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Totino's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "How to Upgrade Pizza Rolls",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How to Upgrade Pizza Rolls",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How to Upgrade Pizza Rolls",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "How to Upgrade Pizza Rolls",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How to Upgrade Pizza Rolls",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How to Upgrade Pizza Rolls",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [
+      "Allrecipes"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "How to Upgrade Pizza Rolls",
+    "frame": "frame_0007.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Pillsbury"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Pizza Rolls",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [
+      "LUCERNE"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Pizza Rolls",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Pizza Rolls",
+    "frame": "frame_0015.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls",
+    "frame": "frame_0020.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls",
+    "frame": "frame_0024.jpg",
+    "brands_actually_visible": [
+      "Great Value",
+      "Hormel"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls",
+    "frame": "frame_0025.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Pizza Rolls \ud83c\udf55 #recipe #food #pizza #pizzarolls",
+    "frame": "frame_0022.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [
+      "flavorgod seasonings"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Stuffed Pepperoni Rolls #pizza #easyrecipe #partyfood #appetizer",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Spotify"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [
+      "nothing phone"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Budget Phone for Everyday Use  Review and Gaming Performance",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Chosen Foods"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [
+      "Chosen Foods"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [
+      "Chosen Foods"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0015.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [
+      "Ulefone"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0020.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0024.jpg",
+    "brands_actually_visible": [
+      "ulefone"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0025.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0029.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0030.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0034.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0039.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0044.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0049.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Rugged Phone\uff1f",
+    "frame": "frame_0054.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Champion"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [
+      "Champion",
+      "Coca Cola"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0015.jpg",
+    "brands_actually_visible": [
+      "Champion",
+      "Coca-Cola"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0025.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0027.jpg",
+    "brands_actually_visible": [
+      "Coca-Cola"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Cheapest Smartphone From Amazon",
+    "frame": "frame_0029.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Ultimate Pizza Rolls Hack #shorts",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Ultimate Pizza Rolls Hack #shorts",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [
+      "totino's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The Ultimate Pizza Rolls Hack #shorts",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The Ultimate Pizza Rolls Hack #shorts",
+    "frame": "frame_0007.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Ultimate Pizza Rolls Hack #shorts",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Ultimate Pizza Rolls Hack #shorts",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0023.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0027.jpg",
+    "brands_actually_visible": [],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0029.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0035.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0041.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0045.jpg",
+    "brands_actually_visible": [
+      "Ollie",
+      "\u0160KODA"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0047.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0052.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0057.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0058.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0060.jpg",
+    "brands_actually_visible": [
+      "OPPO"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The best phone of 2025\uff1f OPPO Find X9 Pro...",
+    "frame": "frame_0064.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "This Smartphone's Battery lasts 94 Days!",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Oukitel"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "This Smartphone's Battery lasts 94 Days!",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "This Smartphone's Battery lasts 94 Days!",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [
+      "Apple"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "This Smartphone's Battery lasts 94 Days!",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "This Smartphone's Battery lasts 94 Days!",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [
+      "YouTube"
+    ],
+    "label_source": "hand_labeled_stage2",
+    "review_status": "accepted_existing",
+    "dataset_stage": "stage5_candidate"
+  },
+  {
+    "video": "This Smartphone's Battery lasts 94 Days!",
+    "frame": "frame_0011.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "This Smartphone's Battery lasts 94 Days!",
+    "frame": "frame_0015.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Why the iPhone 16e Just Doesn\u2019t Make Sense",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Apple"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/0amYSfrACao",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Why the iPhone 16e Just Doesn\u2019t Make Sense",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/0amYSfrACao",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Why the iPhone 16e Just Doesn\u2019t Make Sense",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/0amYSfrACao",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Why the iPhone 16e Just Doesn\u2019t Make Sense",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [
+      "Apple"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/0amYSfrACao",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Why the iPhone 16e Just Doesn\u2019t Make Sense",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/0amYSfrACao",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Why the iPhone 16e Just Doesn\u2019t Make Sense",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/0amYSfrACao",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Why the iPhone 16e Just Doesn\u2019t Make Sense",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/0amYSfrACao",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Why the iPhone 16e Just Doesn\u2019t Make Sense",
+    "frame": "frame_0007.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/0amYSfrACao",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "iPhone 17 UNBOXING and Hands ON - Sage Green",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Apple"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/AeBZjMXIoa4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "iPhone 17 UNBOXING and Hands ON - Sage Green",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/AeBZjMXIoa4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "iPhone 17 UNBOXING and Hands ON - Sage Green",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/AeBZjMXIoa4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "iPhone 17 UNBOXING and Hands ON - Sage Green",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/AeBZjMXIoa4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "iPhone 17 UNBOXING and Hands ON - Sage Green",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/AeBZjMXIoa4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "iPhone 17 UNBOXING and Hands ON - Sage Green",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/AeBZjMXIoa4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "iPhone 17 UNBOXING and Hands ON - Sage Green",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [
+      "Apple"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/AeBZjMXIoa4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST SMASHBURGERS in Las Vegas #smashburgers #lasvegas #foodchallenge",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/K7rB4f4Bbus",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST SMASHBURGERS in Las Vegas #smashburgers #lasvegas #foodchallenge",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/K7rB4f4Bbus",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST SMASHBURGERS in Las Vegas #smashburgers #lasvegas #foodchallenge",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/K7rB4f4Bbus",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST SMASHBURGERS in Las Vegas #smashburgers #lasvegas #foodchallenge",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/K7rB4f4Bbus",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST SMASHBURGERS in Las Vegas #smashburgers #lasvegas #foodchallenge",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/K7rB4f4Bbus",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST SMASHBURGERS in Las Vegas #smashburgers #lasvegas #foodchallenge",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/K7rB4f4Bbus",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "McDonald's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [
+      "Arby's",
+      "Burger King",
+      "Dairy Queen",
+      "McDonald's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [
+      "Burger King"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [
+      "Arby's",
+      "Dairy Queen",
+      "KFC",
+      "McDonald's",
+      "Wendy's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [
+      "Wagyu"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0025.jpg",
+    "brands_actually_visible": [
+      "Dairy Queen"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "I Tried Every Fast Food Burger",
+    "frame": "frame_0029.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/R47znlVilCQ",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "People are calling this the BEST BURGER in New York City \u2013 7th Street Burger!",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/yHdQtsjY4Fs",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "People are calling this the BEST BURGER in New York City \u2013 7th Street Burger!",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/yHdQtsjY4Fs",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "People are calling this the BEST BURGER in New York City \u2013 7th Street Burger!",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/yHdQtsjY4Fs",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "People are calling this the BEST BURGER in New York City \u2013 7th Street Burger!",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/yHdQtsjY4Fs",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "People are calling this the BEST BURGER in New York City \u2013 7th Street Burger!",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [
+      "Coca-Cola"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/yHdQtsjY4Fs",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "One of the BEST CHEESEBURGERS in all of NJ! The SCHMACC BURGER from Tony Beef! \ud83c\udf54 WOW! #DEVOURPOWER",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/CFaUkPqfsP8",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "One of the BEST CHEESEBURGERS in all of NJ! The SCHMACC BURGER from Tony Beef! \ud83c\udf54 WOW! #DEVOURPOWER",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/CFaUkPqfsP8",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "One of the BEST CHEESEBURGERS in all of NJ! The SCHMACC BURGER from Tony Beef! \ud83c\udf54 WOW! #DEVOURPOWER",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [
+      "Tony beef"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/CFaUkPqfsP8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "One of the BEST CHEESEBURGERS in all of NJ! The SCHMACC BURGER from Tony Beef! \ud83c\udf54 WOW! #DEVOURPOWER",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/CFaUkPqfsP8",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "One of the BEST CHEESEBURGERS in all of NJ! The SCHMACC BURGER from Tony Beef! \ud83c\udf54 WOW! #DEVOURPOWER",
+    "frame": "frame_0019.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/CFaUkPqfsP8",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Voted best cheeseburger in California by Yelp #foodblogger #foodie #losangeles #burger #shorts",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/jZAZoWPmh04",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Voted best cheeseburger in California by Yelp #foodblogger #foodie #losangeles #burger #shorts",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [
+      "For The Win"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/jZAZoWPmh04",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Voted best cheeseburger in California by Yelp #foodblogger #foodie #losangeles #burger #shorts",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/jZAZoWPmh04",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Voted best cheeseburger in California by Yelp #foodblogger #foodie #losangeles #burger #shorts",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/jZAZoWPmh04",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Voted best cheeseburger in California by Yelp #foodblogger #foodie #losangeles #burger #shorts",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/jZAZoWPmh04",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "What I Eat Living in Los Angeles (Part 91) - Double Cheeseburgers from Nexx Burger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/1qHIHVJ30WA",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "What I Eat Living in Los Angeles (Part 91) - Double Cheeseburgers from Nexx Burger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/1qHIHVJ30WA",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "What I Eat Living in Los Angeles (Part 91) - Double Cheeseburgers from Nexx Burger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/1qHIHVJ30WA",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "What I Eat Living in Los Angeles (Part 91) - Double Cheeseburgers from Nexx Burger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/1qHIHVJ30WA",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "What I Eat Living in Los Angeles (Part 91) - Double Cheeseburgers from Nexx Burger \ud83c\udf54\ud83c\udf54",
+    "frame": "frame_0011.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/1qHIHVJ30WA",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Burger Ever",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Xndy_-2Pv5I",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The Best Burger Ever",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Xndy_-2Pv5I",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Burger Ever",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Xndy_-2Pv5I",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Burger Ever",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Xndy_-2Pv5I",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Best Burger Ever",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Xndy_-2Pv5I",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Top 5 Burgers Of All Time",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/lRBsGdg8nh8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Top 5 Burgers Of All Time",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [
+      "FIVE GUYS",
+      "McDonald",
+      "SHAKE SHACK",
+      "WHAT A BURGER"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/lRBsGdg8nh8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Top 5 Burgers Of All Time",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [
+      "FIVE GUYS",
+      "McDonald",
+      "SHAKE SHACK",
+      "WHAT A BURGER"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/lRBsGdg8nh8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Top 5 Burgers Of All Time",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [
+      "FIVE GUYS",
+      "McDonald",
+      "SHAKE SHACK",
+      "WHAT A BURGER"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/lRBsGdg8nh8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Top 5 Burgers Of All Time",
+    "frame": "frame_0019.jpg",
+    "brands_actually_visible": [
+      "Culver's",
+      "FIVE GUYS",
+      "Freddy's",
+      "McDonald",
+      "SHAKE SHACK",
+      "WHAT A BURGER"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/lRBsGdg8nh8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Top 5 Burgers Of All Time",
+    "frame": "frame_0023.jpg",
+    "brands_actually_visible": [
+      "Culver's",
+      "FIVE GUYS",
+      "Freddy's",
+      "McDonald",
+      "SHAKE SHACK",
+      "WHAT A BURGER",
+      "Wendy's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/lRBsGdg8nh8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Top 5 Burgers Of All Time",
+    "frame": "frame_0028.jpg",
+    "brands_actually_visible": [
+      "Culver's",
+      "FIVE GUYS",
+      "In-n-out",
+      "McDonald",
+      "SHAKE SHACK",
+      "WHAT A BURGER",
+      "Wendy's",
+      "freddy's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/lRBsGdg8nh8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Best Burger in America _ Rated #1 by Food Network!\ud83d\udccdAu Cheval Diner Chicago IL",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/PRLm95R1o04",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best Burger in America _ Rated #1 by Food Network!\ud83d\udccdAu Cheval Diner Chicago IL",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/PRLm95R1o04",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best Burger in America _ Rated #1 by Food Network!\ud83d\udccdAu Cheval Diner Chicago IL",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/PRLm95R1o04",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best Burger in America _ Rated #1 by Food Network!\ud83d\udccdAu Cheval Diner Chicago IL",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [
+      "Au cheval - Restaurant in Chicago"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/PRLm95R1o04",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Best Burger in America _ Rated #1 by Food Network!\ud83d\udccdAu Cheval Diner Chicago IL",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [
+      "Au cheval - Restaurant in Chicago"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/PRLm95R1o04",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Kirkland - Parchemin"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0007.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best way to make smash burgers #smashburger #burger #grilling #cooking #skillet #castiron",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6S6OzixE2lU",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST WAY to make JUICY burgers!",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/i2Hcoz9LD44",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST WAY to make JUICY burgers!",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/i2Hcoz9LD44",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST WAY to make JUICY burgers!",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/i2Hcoz9LD44",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST WAY to make JUICY burgers!",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/i2Hcoz9LD44",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST WAY to make JUICY burgers!",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [
+      "Chiles Smoke"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/i2Hcoz9LD44",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The BEST WAY to make JUICY burgers!",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/i2Hcoz9LD44",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST WAY to make JUICY burgers!",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/i2Hcoz9LD44",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The BEST WAY to make JUICY burgers!",
+    "frame": "frame_0007.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/i2Hcoz9LD44",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash burgers",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Oqvt_hy-E-Q",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash burgers",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Oqvt_hy-E-Q",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash burgers",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Oqvt_hy-E-Q",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash burgers",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [
+      "Dano's"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Oqvt_hy-E-Q",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Smash burgers",
+    "frame": "frame_0011.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Oqvt_hy-E-Q",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The only Michelin Star Burger",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Q8sDzNkmGlw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The only Michelin Star Burger",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Q8sDzNkmGlw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The only Michelin Star Burger",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Q8sDzNkmGlw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The only Michelin Star Burger",
+    "frame": "frame_0015.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Q8sDzNkmGlw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The only Michelin Star Burger",
+    "frame": "frame_0020.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Q8sDzNkmGlw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The only Michelin Star Burger",
+    "frame": "frame_0025.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Q8sDzNkmGlw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best burger ever",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/2iOzpZtoz3s",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The best burger ever",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/2iOzpZtoz3s",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best burger ever",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/2iOzpZtoz3s",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best burger ever",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/2iOzpZtoz3s",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The best burger ever",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/2iOzpZtoz3s",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Bubba(in the background)"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [
+      "Bubba(in the background)",
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [
+      "BUBBA(in the background)",
+      "Columbus Craft Meats"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [
+      "Columbus Craft meals"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0015.jpg",
+    "brands_actually_visible": [
+      "Bubba(in the background)",
+      "Columbus Craft Meals"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [
+      "BUBBA(in the background)",
+      "Trident Seafood"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0022.jpg",
+    "brands_actually_visible": [
+      "Trident Seafood"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "3 favorite burger patties from Costco",
+    "frame": "frame_0027.jpg",
+    "brands_actually_visible": [
+      "BUBBA(in the background)",
+      "Trident Seafood"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/aWnTLKQeNx4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [
+      "BUBBA"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0022.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0024.jpg",
+    "brands_actually_visible": [
+      "BJ's",
+      "BUBBA"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "The Quest for the Best Frozen Burger  Unexpected Winner Revealed",
+    "frame": "frame_0027.jpg",
+    "brands_actually_visible": [
+      "Nutella"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9JRcNIdfwGw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Godrej Veg Burger Patty #burger #godrej #frozenfood #asmr #viral #trending #shorts #readytoeat",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Yummiez"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/8knoIS4zDLo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Godrej Veg Burger Patty #burger #godrej #frozenfood #asmr #viral #trending #shorts #readytoeat",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/8knoIS4zDLo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Godrej Veg Burger Patty #burger #godrej #frozenfood #asmr #viral #trending #shorts #readytoeat",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/8knoIS4zDLo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Godrej Veg Burger Patty #burger #godrej #frozenfood #asmr #viral #trending #shorts #readytoeat",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/8knoIS4zDLo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Godrej Veg Burger Patty #burger #godrej #frozenfood #asmr #viral #trending #shorts #readytoeat",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/8knoIS4zDLo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Godrej Veg Burger Patty #burger #godrej #frozenfood #asmr #viral #trending #shorts #readytoeat",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/8knoIS4zDLo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Godrej Veg Burger Patty #burger #godrej #frozenfood #asmr #viral #trending #shorts #readytoeat",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/8knoIS4zDLo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Godrej Veg Burger Patty #burger #godrej #frozenfood #asmr #viral #trending #shorts #readytoeat",
+    "frame": "frame_0007.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/8knoIS4zDLo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "RASTELLI'S"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [
+      "RASTELLI'S"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0011.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0023.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0029.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0034.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0040.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0046.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0052.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0054.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0057.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0060.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "I rate the Rastelli\u2019s Smashed Butter Burgers from Costco #costco #foodreview #burger #butterburger",
+    "frame": "frame_0063.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/G8NVZZoJJoo",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash Burger Tacos",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6rTjKIewJu4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash Burger Tacos",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6rTjKIewJu4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash Burger Tacos",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6rTjKIewJu4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash Burger Tacos",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6rTjKIewJu4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Smash Burger Tacos",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/6rTjKIewJu4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Kirkland Signature"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [
+      "Beyond Burger"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [
+      "Beyond Burger"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [
+      "Beyond Burger"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0015.jpg",
+    "brands_actually_visible": [
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0025.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Burger Patties at Costco, Plant-Based VS Grass Fed #burger #patties #costcofinds",
+    "frame": "frame_0029.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/EM11h15tWvM",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best Frozen Burgers",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Walmart"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/MbabuEh_JT8",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best Frozen Burgers",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/MbabuEh_JT8",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best Frozen Burgers",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/MbabuEh_JT8",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best Frozen Burgers",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [
+      "Kraft Delux"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/MbabuEh_JT8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Best Frozen Burgers",
+    "frame": "frame_0010.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/MbabuEh_JT8",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Best Frozen Burgers",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/MbabuEh_JT8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Best Frozen Burgers",
+    "frame": "frame_0013.jpg",
+    "brands_actually_visible": [
+      "Member's Mark - Ground Angus beef"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/MbabuEh_JT8",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Costco Burger Review!! (11_10)!! #SHORTS",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9cuZk2iJHQs",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Costco Burger Review!! (11_10)!! #SHORTS",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9cuZk2iJHQs",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Costco Burger Review!! (11_10)!! #SHORTS",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9cuZk2iJHQs",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Costco Burger Review!! (11_10)!! #SHORTS",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [
+      "mcCormick"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9cuZk2iJHQs",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Costco Burger Review!! (11_10)!! #SHORTS",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/9cuZk2iJHQs",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How To Grill Costco Kirkland Signature Frozen Burger Patties for Your Next Backyard Barbecue",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Kirkland"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Ox-PijisWvw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How To Grill Costco Kirkland Signature Frozen Burger Patties for Your Next Backyard Barbecue",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Ox-PijisWvw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How To Grill Costco Kirkland Signature Frozen Burger Patties for Your Next Backyard Barbecue",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Ox-PijisWvw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How To Grill Costco Kirkland Signature Frozen Burger Patties for Your Next Backyard Barbecue",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Ox-PijisWvw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How To Grill Costco Kirkland Signature Frozen Burger Patties for Your Next Backyard Barbecue",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Ox-PijisWvw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How To Grill Costco Kirkland Signature Frozen Burger Patties for Your Next Backyard Barbecue",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Ox-PijisWvw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How To Grill Costco Kirkland Signature Frozen Burger Patties for Your Next Backyard Barbecue",
+    "frame": "frame_0025.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Ox-PijisWvw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "How To Grill Costco Kirkland Signature Frozen Burger Patties for Your Next Backyard Barbecue",
+    "frame": "frame_0029.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/Ox-PijisWvw",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Walmart Frozen Beef Patties_ 100% Beef, 100% Value",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [
+      "Great Value Walmart"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/TAqDfL4umHI",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Walmart Frozen Beef Patties_ 100% Beef, 100% Value",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [
+      "Great Value Walmart"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/TAqDfL4umHI",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Walmart Frozen Beef Patties_ 100% Beef, 100% Value",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/TAqDfL4umHI",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Walmart Frozen Beef Patties_ 100% Beef, 100% Value",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/TAqDfL4umHI",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Walmart Frozen Beef Patties_ 100% Beef, 100% Value",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/TAqDfL4umHI",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0001.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0002.jpg",
+    "brands_actually_visible": [
+      "Pyramid Eats"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0003.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0006.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0007.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Veg Burger Patty \u2013 Juicy, Crispy & 100% Vegetarian \ud83c\udf54\ud83e\udd54 _ Pyramid Eats",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [
+      "Pyramid Eats"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/h6PCL47n8Lk",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0004.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0008.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0012.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0017.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0021.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0025.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0027.jpg",
+    "brands_actually_visible": [
+      "Bubba Burger",
+      "Marketside by Walmart",
+      "Philly gourmet",
+      "Walmart great value"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Frozen Burger Test  #burger #test",
+    "frame": "frame_0029.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/LoDoK_sHmS4",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0000.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0005.jpg",
+    "brands_actually_visible": [
+      "Chik-fill-a"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0009.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0014.jpg",
+    "brands_actually_visible": [
+      "big league chew"
+    ],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Recovered from edited gallery"
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0018.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0023.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0027.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0032.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0036.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  },
+  {
+    "video": "Who can pack a better lunch_ (ME vs DAD)",
+    "frame": "frame_0041.jpg",
+    "brands_actually_visible": [],
+    "label_source": "human_reviewed_stage5",
+    "review_status": "human_reviewed",
+    "dataset_stage": "stage5_candidate",
+    "source_url": "https://www.youtube.com/shorts/irAw8jPK92k",
+    "review_notes": "Reviewed in gallery; unchanged label accepted."
+  }
+]

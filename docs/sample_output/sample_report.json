@@ -4,6 +4,22 @@
     "Chi",
     "Coca-Cola"
   ],
+  "brand_presence_summary": "Brand/name evidence found: Chi, Coca-Cola.",
+  "brand_visibility_summary": "Visible brand/name detected: Chi, Coca-Cola.",
+  "visible_brand_count": 2,
+  "brand_evidence": {
+    "visible_in_frames": [
+      "Chi",
+      "Coca-Cola"
+    ],
+    "on_screen_text": [],
+    "mentioned_in_audio": [],
+    "mentioned_in_description": []
+  },
+  "all_detected_brand_names": [
+    "Chi",
+    "Coca-Cola"
+  ],
   "brand_context": {
     "Chi": {
       "positive": true,

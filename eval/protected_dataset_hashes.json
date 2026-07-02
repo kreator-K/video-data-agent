@@ -5,6 +5,9 @@
     },
     "eval/stage2_labels.json": {
       "sha256": "b019bf303b85920340eeee7dccd50f270c5f45217ca7c886ebb41a826ecf710f"
+    },
+    "eval/golden_dataset_stage5.json": {
+      "sha256": "6f15a3f8bf355b8d16d5ab79160a6ddb45ba94a0e9a99e9d483c438ccb175e72"
     }
   }
 }

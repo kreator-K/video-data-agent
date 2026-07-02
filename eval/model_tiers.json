@@ -1,0 +1,61 @@
+{
+  "default_tier": "accuracy",
+  "recommended_model": {
+    "model": "meta/llama-4-maverick-17b-128e-instruct",
+    "user_facing_prompt_variant": "strict_precision",
+    "review_prompt_variant": "default",
+    "source": "eval/model_ab_comparison.md",
+    "dataset": "eval/golden_dataset.json",
+    "f1_score": 0.62,
+    "notes": "Selected from the 2026-07-02 live A/B run on the protected 36-frame human-labeled golden set. On the 360-frame Stage 5 set, strict_precision kept F1 at 0.39 while reducing false positives from 183 to 151."
+  },
+  "selection_policy": {
+    "primary": "highest_f1",
+    "tie_breakers": [
+      "highest_json_parse_success_rate",
+      "lowest_error_rate",
+      "lowest_avg_latency_ms"
+    ]
+  },
+  "tiers": {
+    "baseline": {
+      "description": "Lowest-risk current baseline for regression checks.",
+      "models": [
+        "meta/llama-3.2-11b-vision-instruct"
+      ]
+    },
+    "balanced": {
+      "description": "Practical shortlist for routine evals: stronger vision without an overly wide sweep.",
+      "models": [
+        "meta/llama-3.2-90b-vision-instruct",
+        "nvidia/nemotron-nano-12b-v2-vl"
+      ]
+    },
+    "accuracy": {
+      "description": "Best current candidate set for selecting the default brand-detection model.",
+      "models": [
+        "meta/llama-3.2-90b-vision-instruct",
+        "meta/llama-4-maverick-17b-128e-instruct",
+        "nvidia/nemotron-nano-12b-v2-vl"
+      ]
+    },
+    "experimental": {
+      "description": "Models that need endpoint-id or JSON-contract validation before they can be compared as production candidates.",
+      "models": [
+        "kimi-k2.6",
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
+      ]
+    },
+    "full": {
+      "description": "Full sweep including baseline, accuracy candidates, and experimental models.",
+      "models": [
+        "meta/llama-3.2-11b-vision-instruct",
+        "meta/llama-3.2-90b-vision-instruct",
+        "meta/llama-4-maverick-17b-128e-instruct",
+        "nvidia/nemotron-nano-12b-v2-vl",
+        "kimi-k2.6",
+        "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
+      ]
+    }
+  }
+}

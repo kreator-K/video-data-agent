@@ -2,8 +2,8 @@ import argparse
 import base64
 import hashlib
 import json
-import os
 import re
+import sys
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -12,6 +12,11 @@ from dotenv import load_dotenv
 
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from src.model_config import NVIDIA_BASE_URL, nvidia_api_keys, nvidia_vision_model
+
 GOLDEN_DATASET_PATH = ROOT / "eval/golden_dataset.json"
 STAGE2_LABELS_PATH = ROOT / "eval/stage2_labels.json"
 STAGE2_PREDICTIONS_PATH = ROOT / "eval/stage2_predictions.json"
@@ -25,12 +30,37 @@ PROTECTED_DATASETS = {
     "eval/stage2_labels.json": STAGE2_LABELS_PATH,
 }
 
-NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
-DEFAULT_NVIDIA_VISION_MODEL = "meta/llama-3.2-11b-vision-instruct"
-
 BRAND_ALIASES = {
+    "all recipes": "allrecipes",
+    "au cheval restaurant in chicago": "au cheval",
+    "beyond burger": "beyond",
+    "beyond meat": "beyond",
+    "bibigo": "bibigo",
+    "bubba burger": "bubba",
+    "bubba in the background": "bubba",
+    "bubbain the background": "bubba",
+    "chick fil a": "chick-fil-a",
+    "chik fill a": "chick-fil-a",
     "coca cola": "coca-cola",
     "coca-cola": "coca-cola",
+    "columbus craft meals": "columbus craft meats",
+    "great value walmart": "great value",
+    "kirkland signature": "kirkland",
+    "kirkland parchemin": "kirkland",
+    "kraft delux": "kraft deluxe",
+    "mcdonald": "mcdonalds",
+    "mcdonalds": "mcdonalds",
+    "mcdonald's": "mcdonalds",
+    "member's mark ground angus beef": "member's mark",
+    "nothing phone": "nothing",
+    "pyramid eats": "pyramid eats",
+    "rastelli's": "rastelli's",
+    "rastellis": "rastelli's",
+    "tony beef": "tony beef",
+    "ulefone": "ulefone",
+    "walmart great value": "great value",
+    "what a burger": "whataburger",
+    "whataburger": "whataburger",
 }
 
 REFINEMENT_DESCRIPTIONS = {
@@ -86,7 +116,12 @@ def write_json(path: Path, data: Any) -> None:
 
 
 def normalize_brand(brand: str) -> str:
-    normalized = re.sub(r"\s+", " ", str(brand).strip().lower())
+    normalized = str(brand).strip().lower()
+    normalized = re.sub(r"\([^)]*\)", "", normalized)
+    normalized = normalized.replace("&", " and ")
+    normalized = re.sub(r"[-–—|_/]+", " ", normalized)
+    normalized = re.sub(r"[^a-z0-9' ]+", " ", normalized)
+    normalized = re.sub(r"\s+", " ", normalized).strip()
     return BRAND_ALIASES.get(normalized, normalized)
 
 
@@ -318,18 +353,31 @@ def run_refinement_model(refinement_type: str, rows: list[dict], model: str) -> 
     from openai import OpenAI
 
     load_dotenv(ROOT / ".env")
-    api_key = os.getenv("NVIDIA_API_KEY")
-    if not api_key:
-        raise RuntimeError("NVIDIA_API_KEY is required for --run-model")
+    api_keys = nvidia_api_keys()
+    if not api_keys:
+        raise RuntimeError("NVIDIA_API_KEY or NVIDIA_API_KEYS is required for --run-model")
 
-    client = OpenAI(base_url=NVIDIA_BASE_URL, api_key=api_key)
+    clients = [OpenAI(base_url=NVIDIA_BASE_URL, api_key=api_key) for api_key in api_keys]
     prompt = build_refined_prompt(refinement_type)
     outputs = {}
     for row in rows:
         frame_path = ROOT / row["frame_path"]
         if not frame_path.exists():
             raise FileNotFoundError(f"Missing failed frame image: {frame_path}")
-        prediction = run_model_on_frame(client, model, frame_path, prompt)
+
+        last_error = None
+        for index, client in enumerate(clients, start=1):
+            try:
+                prediction = run_model_on_frame(client, model, frame_path, prompt)
+                break
+            except Exception as exc:
+                last_error = exc
+                if index == len(clients):
+                    raise
+                print("NVIDIA refinement call failed; retrying with the next configured key.")
+        else:
+            raise RuntimeError(f"NVIDIA refinement failed: {last_error}")
+
         prediction["frame"] = row["frame_id"]
         outputs[prediction_key(row)] = prediction
     return outputs
@@ -346,9 +394,12 @@ def next_run_id(history: list[dict]) -> str:
 
 def load_history() -> list[dict]:
     if REFINEMENT_HISTORY_PATH.exists():
-        data = load_json(REFINEMENT_HISTORY_PATH)
+        try:
+            data = load_json(REFINEMENT_HISTORY_PATH)
+        except json.JSONDecodeError:
+            return []
         if not isinstance(data, list):
-            raise RuntimeError("eval/refinement_history.json must contain a JSON list")
+            return []
         return data
     return []
 
@@ -370,19 +421,34 @@ def run_loop(run_model: bool, model: str, dry_run: bool = False) -> list[dict]:
     failed_rows = failed_stage2_rows(stage2_predictions)
     groups = group_failures(failed_rows)
     baseline_predictions = stage2_predictions_by_key(stage2_predictions)
+    frame_groups = defaultdict(list)
+    for refinement_type, rows in groups.items():
+        for row in rows:
+            frame_groups[prediction_key(row)].append(refinement_type)
 
     history = load_history()
     history_records = []
     run_artifacts = []
 
     for refinement_type, rows in groups.items():
-        if run_model:
-            model_outputs = run_refinement_model(refinement_type, rows, model)
-        else:
-            model_outputs = {
-                prediction_key(row): apply_offline_refinement(refinement_type, row)
-                for row in rows
-            }
+        conflict_keys = [
+            prediction_key(row)
+            for row in rows
+            if len(frame_groups[prediction_key(row)]) > 1
+        ]
+        try:
+            if run_model:
+                model_outputs = run_refinement_model(refinement_type, rows, model)
+            else:
+                model_outputs = {
+                    prediction_key(row): apply_offline_refinement(refinement_type, row)
+                    for row in rows
+                }
+        except Exception:
+            if not dry_run and history_records:
+                append_history(history_records)
+                write_json(REFINEMENT_RUNS_DIR / f"{history_records[0]['run_id']}_partial_results.json", run_artifacts)
+            raise
 
         candidate_predictions = dict(baseline_predictions)
         for key, output in model_outputs.items():
@@ -397,6 +463,8 @@ def run_loop(run_model: bool, model: str, dry_run: bool = False) -> list[dict]:
             if accepted
             else f"F1 did not improve over baseline {baseline_f1:.2f}; rejected."
         )
+        if conflict_keys:
+            reason += f" Conflict noted for {len(conflict_keys)} frame(s) shared with other refinement groups."
 
         record = {
             "run_id": next_run_id(history + history_records),
@@ -407,6 +475,7 @@ def run_loop(run_model: bool, model: str, dry_run: bool = False) -> list[dict]:
             "delta": delta,
             "accepted": accepted,
             "reason": reason,
+            "conflicting_frames": sorted(set(conflict_keys)),
         }
         history_records.append(record)
         run_artifacts.append(
@@ -439,7 +508,7 @@ def main() -> int:
     parser.add_argument("--dry-run", action="store_true", help="Evaluate refinements without writing history or artifacts.")
     parser.add_argument(
         "--model",
-        default=os.getenv("NVIDIA_VISION_MODEL", DEFAULT_NVIDIA_VISION_MODEL),
+        default=nvidia_vision_model(),
         help="NVIDIA NIM vision model name. Defaults to NVIDIA_VISION_MODEL or a Llama vision model.",
     )
     args = parser.parse_args()

@@ -19,6 +19,8 @@ def load_labels(path: Path = LABELS_PATH) -> list:
 
 def load_vision_results(video_id: str) -> dict:
     path = Path("data/frames") / video_id / "vision_analysis.json"
+    if not path.exists():
+        return {}
     with open(path) as f:
         results = json.load(f)
 
@@ -41,7 +43,7 @@ def prediction_brands(raw_prediction: dict) -> list[str]:
 
 
 def ground_truth_brands(label: dict) -> list[str]:
-    brands = label.get("brands_actually_visible", [])
+    brands = label.get("brands_actually_visible") or []
     return sorted({normalize_brand(str(brand)) for brand in brands if str(brand).strip()})
 
 
