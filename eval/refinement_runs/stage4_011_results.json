@@ -1,0 +1,200 @@
+[
+  {
+    "run_id": "stage4_011",
+    "refinement_type": "parser_failure",
+    "refinement_description": "Re-emphasize strict JSON output and salvage valid JSON from markdown/prose-wrapped model responses.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.81,
+    "delta": 0.0,
+    "accepted": false,
+    "reason": "F1 did not improve over baseline 0.81; rejected.",
+    "frames": [
+      {
+        "video_id": "This Smartphone's Battery lasts 94 Days!",
+        "frame_id": "frame_0009.jpg",
+        "frame_path": "data/frames/This Smartphone's Battery lasts 94 Days!/frame_0009.jpg"
+      },
+      {
+        "video_id": "The Cheapest Smartphone From Amazon",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 11,
+        "false_positives": 2,
+        "false_negatives": 3,
+        "true_negative_frames": 23
+      },
+      "precision": 0.85,
+      "recall": 0.79,
+      "f1_score": 0.81
+    },
+    "model_outputs": {
+      "This Smartphone's Battery lasts 94 Days!::frame_0009.jpg": {
+        "raw_response": "The image shows two cell phones side by side, with a green battery icon above each one. The phone on the left has a video playing, and the phone on the right has a picture of a room. \n\n*   **Setting:** The background is a light-colored wood paneling, suggesting that the setting is indoors.\n*   **Mood:** The mood of the image is neutral, as it appears to be a screenshot from a video or a still image.\n*   **Actions:** The actions taking place in this frame are:\n    *   Watching a video on the phone on the left\n    *   Looking at a picture on the phone on the right\n*   **Brands:** There are no visible brands or logos in the image.\n*   **Products:** There are no visible products in the image.\n*   **Text Visible:** The text \"YouTube video\" is visible at the bottom of the image.\n*   **People Count:** There is one person visible in the image, who is shown on the phone on the left.\n\nOverall, the image appears to be a screenshot from a YouTube video, showing two cell phones with different content on each one.",
+        "frame": "frame_0009.jpg"
+      },
+      "The Cheapest Smartphone From Amazon::frame_0015.jpg": {
+        "raw_response": "Based on the image, here is the JSON object with the requested fields:\n\n**Setting:** The setting appears to be an indoor room, possibly a living room or office, with a lamp and a chair in the background.\n\n**Mood:** The mood of the image is casual and relaxed, with the person wearing a hoodie and a baseball cap.\n\n**Actions:** The person is holding a plastic bag in their hands and appears to be opening it.\n\n**Brands:** The following brands are visible:\n\n* Coca-Cola (on the person's hat)\n* Champion (on the person's hoodie)\n\n**Products:** There is a white cord or cable visible in the box in front of the person, but it is not clear what type of product it is.\n\n**Text Visible:** There is no text visible on the screen.\n\n**People Count:** There is one person visible in the image.",
+        "frame": "frame_0015.jpg"
+      }
+    },
+    "model_mode": "nvidia_nim",
+    "prompt_refinement": "Return only one valid JSON object. Do not wrap it in markdown or prose."
+  },
+  {
+    "run_id": "stage4_012",
+    "refinement_type": "brand_alias",
+    "refinement_description": "Normalize common brand spelling variants to canonical names before scoring.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.81,
+    "delta": 0.0,
+    "accepted": false,
+    "reason": "F1 did not improve over baseline 0.81; rejected.",
+    "frames": [
+      {
+        "video_id": "The Cheapest Smartphone From Amazon",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 11,
+        "false_positives": 2,
+        "false_negatives": 3,
+        "true_negative_frames": 23
+      },
+      "precision": 0.85,
+      "recall": 0.79,
+      "f1_score": 0.81
+    },
+    "model_outputs": {
+      "The Cheapest Smartphone From Amazon::frame_0015.jpg": {
+        "raw_response": "The image shows a man wearing a green Champion hoodie and a black Coca-Cola hat, holding a plastic bag in his hands. The background appears to be a living room or office setting.\n\n*   **Setting:** The setting appears to be a living room or office, with a desk and chair visible in the background.\n*   **Mood:** The mood of the image is casual and relaxed, with the man sitting comfortably in his chair and holding a plastic bag.\n*   **Actions:** The man is holding a plastic bag in his hands, which could be a snack or a small item.\n*   **Brands:**\n    *   Champion (hoodie)\n    *   Coca-Cola (hat)\n*   **Products:** None visible\n*   **Text Visible:** None\n*   **People Count:** 1\n\nThe image suggests that the man is enjoying a snack or a small item while sitting in his living room or office. The presence of the Champion hoodie and Coca-Cola hat indicates that he may be a fan of these brands.",
+        "frame": "frame_0015.jpg"
+      }
+    },
+    "model_mode": "nvidia_nim",
+    "prompt_refinement": "Use canonical brand names when visible text has punctuation variants, for example Coca Cola should be returned as Coca-Cola."
+  },
+  {
+    "run_id": "stage4_013",
+    "refinement_type": "false_positive_descriptor",
+    "refinement_description": "Do not put product descriptors, model names, slogans, or appliance design guesses in brands.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.83,
+    "delta": 0.02,
+    "accepted": true,
+    "reason": "F1 improved by 0.02; accepted for further validation.",
+    "frames": [
+      {
+        "video_id": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/Giada De Laurentiis\u2019 Favorite Pizza Rolls!/frame_0015.jpg"
+      },
+      {
+        "video_id": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+        "frame_id": "frame_0003.jpg",
+        "frame_path": "data/frames/The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang/frame_0003.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 10,
+        "false_positives": 0,
+        "false_negatives": 4,
+        "true_negative_frames": 24
+      },
+      "precision": 1.0,
+      "recall": 0.71,
+      "f1_score": 0.83
+    },
+    "model_outputs": {
+      "Giada De Laurentiis\u2019 Favorite Pizza Rolls!::frame_0015.jpg": {
+        "raw_response": "The image shows a woman preparing a pizza in a kitchen. The mood is bright and clean, with a focus on the woman's cooking process.\n\n* Setting: The scene takes place in a modern kitchen with marble countertops and a stainless steel range.\n\t+ The kitchen has a sleek and contemporary design, with a large island in the center and a range hood above the stove.\n\t+ The walls are adorned with marble tiles, adding a touch of elegance to the space.\n* Mood: The mood of the image is bright and clean, with a focus on the woman's cooking process.\n\t+ The lighting is natural, with large windows that allow sunlight to pour in and illuminate the kitchen.\n\t+ The overall atmosphere is one of warmth and hospitality, inviting the viewer to join the woman in her culinary endeavors.\n* Actions: The woman is preparing a pizza, carefully placing toppings on the dough.\n\t+ She is standing at the kitchen island, with the pizza dough spread out before her.\n\t+ Her hands are moving deftly as she adds ingredients, her focus solely on the task at hand.\n* Brands: There are no visible brand names or logos in the image.\n\t+ The kitchen appliances and utensils appear to be generic, without any distinctive branding.\n\t+ The pizza dough and toppings are also unmarked, suggesting that they may be homemade or from a local bakery.\n* Products: The woman is preparing a pizza, which is the main product in the image.\n\t+ The",
+        "frame": "frame_0015.jpg"
+      },
+      "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang::frame_0003.jpg": {
+        "raw_response": "The image shows a bowl of food with a bottle of oil and a bottle of lemon garlic seasoning on the counter. The purpose of the image is to showcase a healthy meal option, possibly for a recipe or cooking blog.\n\nHere are the details of the image:\n\n* A bowl of food:\n\t+ The bowl is brown and filled with a variety of ingredients.\n\t+ There are shrimp, tomatoes, pasta, and arugula in the bowl.\n\t+ The food appears to be a salad or a pasta dish with seafood.\n* A bottle of oil:\n\t+ The bottle is white with a green label.\n\t+ The label has a picture of an avocado and the words \"Avocado Oil\" written in green.\n\t+ The bottle is placed on the counter next to the bowl of food.\n* A bottle of lemon garlic seasoning:\n\t+ The bottle is yellow with a white label.\n\t+ The label has a picture of a lemon and the words \"Lemon Garlic\" written in black.\n\t+ The bottle is placed on the counter next to the bowl of food and the bottle of oil.\n\nOverall, the image suggests that the food in the bowl is a healthy and flavorful meal option, possibly made with ingredients like avocado oil and lemon garlic seasoning.",
+        "frame": "frame_0003.jpg"
+      }
+    },
+    "model_mode": "nvidia_nim",
+    "prompt_refinement": "Only include parent brand names in brands. Put product descriptors, model lines, flavors, slogans, and appliance guesses in products or text_visible instead."
+  },
+  {
+    "run_id": "stage4_014",
+    "refinement_type": "low_light_miss",
+    "refinement_description": "In low-light frames, inspect readable logos/text on apparel, hats, and background objects before returning brands.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.81,
+    "delta": 0.0,
+    "accepted": false,
+    "reason": "F1 did not improve over baseline 0.81; rejected.",
+    "frames": [
+      {
+        "video_id": "The Cheapest Smartphone From Amazon",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 11,
+        "false_positives": 2,
+        "false_negatives": 3,
+        "true_negative_frames": 23
+      },
+      "precision": 0.85,
+      "recall": 0.79,
+      "f1_score": 0.81
+    },
+    "model_outputs": {
+      "The Cheapest Smartphone From Amazon::frame_0015.jpg": {
+        "raw_response": "Based on the provided image, here is the analysis of brand intelligence:\n\n**Setting**: The scene appears to be set in a home or office environment, with a lamp and a plant visible in the background.\n\n**Mood**: The visual mood is casual and relaxed, with the person wearing a green hoodie and a baseball cap.\n\n**Actions**: The person is holding a small plastic bag containing an item, possibly a food or snack item.\n\n**Brands**: The following brands are visible:\n\n*   Coca-Cola (on the person's baseball cap)\n*   Champion (on the person's hoodie)\n\n**Products**: The only product visible is the plastic bag containing an item, but the specific item is not clear.\n\n**Text Visible**: There is no text visible in the image.\n\n**People Count**: There is only one person visible in the image.",
+        "frame": "frame_0015.jpg"
+      }
+    },
+    "model_mode": "nvidia_nim",
+    "prompt_refinement": "For low-light frames, carefully inspect readable high-contrast marks on hats, hoodies, watermarks, app graphics, and package labels before deciding brands are absent."
+  },
+  {
+    "run_id": "stage4_015",
+    "refinement_type": "background_apparel_ambiguity",
+    "refinement_description": "Count readable secondary apparel and background logos as brands, while keeping them visually verified.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.81,
+    "delta": 0.0,
+    "accepted": false,
+    "reason": "F1 did not improve over baseline 0.81; rejected.",
+    "frames": [
+      {
+        "video_id": "The Cheapest Smartphone From Amazon",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 11,
+        "false_positives": 2,
+        "false_negatives": 3,
+        "true_negative_frames": 23
+      },
+      "precision": 0.85,
+      "recall": 0.79,
+      "f1_score": 0.81
+    },
+    "model_outputs": {
+      "The Cheapest Smartphone From Amazon::frame_0015.jpg": {
+        "raw_response": "The image shows a man wearing a green hoodie and a black baseball cap with the Coca-Cola logo on it, holding a plastic bag in his hands. The background is blurry, but it appears to be a living room or office setting.\n\nHere are the details of the image:\n\n* **Setting**: The image appears to be set in a living room or office, with a couch, chair, and lamp visible in the background.\n* **Mood**: The mood of the image is casual and relaxed, with the man looking comfortable and at ease.\n* **Actions**: The man is holding a plastic bag in his hands, which could be a snack or a small item.\n* **Brands**: The most prominent brand visible in the image is Coca-Cola, which is printed on the man's baseball cap.\n* **Products**: There are no other products visible in the image besides the plastic bag.\n* **Text_visible**: There is no text visible in the image.\n* **People_count**: There is only one person visible in the image, which is the man.\n\nOverall, the image suggests that the man is enjoying a casual moment, possibly snacking on something from the plastic bag. The presence of the Coca-Cola logo on his hat adds a touch of branding to the image.",
+        "frame": "frame_0015.jpg"
+      }
+    },
+    "model_mode": "nvidia_nim",
+    "prompt_refinement": "Readable logos on apparel, hats, watermarks, and background objects count as visible brands even when they are not the primary product."
+  }
+]
