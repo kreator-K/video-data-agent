@@ -1,0 +1,264 @@
+[
+  {
+    "run_id": "stage4_006",
+    "refinement_type": "parser_failure",
+    "refinement_description": "Re-emphasize strict JSON output and salvage valid JSON from markdown/prose-wrapped model responses.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.86,
+    "delta": 0.05,
+    "accepted": true,
+    "reason": "F1 improved by 0.05; accepted for further validation.",
+    "frames": [
+      {
+        "video_id": "This Smartphone's Battery lasts 94 Days!",
+        "frame_id": "frame_0009.jpg",
+        "frame_path": "data/frames/This Smartphone's Battery lasts 94 Days!/frame_0009.jpg"
+      },
+      {
+        "video_id": "The Cheapest Smartphone From Amazon",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 12,
+        "false_positives": 2,
+        "false_negatives": 2,
+        "true_negative_frames": 23
+      },
+      "precision": 0.86,
+      "recall": 0.86,
+      "f1_score": 0.86
+    },
+    "model_outputs": {
+      "This Smartphone's Battery lasts 94 Days!::frame_0009.jpg": {
+        "brands": [],
+        "text_visible": "YouTube video",
+        "offline_refinement": true,
+        "setting": "studio",
+        "mood": "bright",
+        "actions": "displaying smartphones showing video",
+        "products": [
+          "smartphone"
+        ],
+        "people_count": 0,
+        "frame": "frame_0009.jpg",
+        "source": "offline_refinement"
+      },
+      "The Cheapest Smartphone From Amazon::frame_0015.jpg": {
+        "brands": [
+          "champion"
+        ],
+        "text_visible": "back where it matters",
+        "offline_refinement": true,
+        "setting": "indoor",
+        "mood": "warm",
+        "actions": "person unboxing a product",
+        "products": [
+          "cap",
+          "shirt",
+          "product box"
+        ],
+        "people_count": 1,
+        "frame": "frame_0015.jpg",
+        "source": "offline_refinement"
+      }
+    },
+    "model_mode": "offline_existing_predictions",
+    "prompt_refinement": "Return only one valid JSON object. Do not wrap it in markdown or prose."
+  },
+  {
+    "run_id": "stage4_007",
+    "refinement_type": "brand_alias",
+    "refinement_description": "Normalize common brand spelling variants to canonical names before scoring.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.81,
+    "delta": 0.0,
+    "accepted": false,
+    "reason": "F1 did not improve over baseline 0.81; rejected.",
+    "frames": [
+      {
+        "video_id": "The Cheapest Smartphone From Amazon",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 11,
+        "false_positives": 2,
+        "false_negatives": 3,
+        "true_negative_frames": 23
+      },
+      "precision": 0.85,
+      "recall": 0.79,
+      "f1_score": 0.81
+    },
+    "model_outputs": {
+      "The Cheapest Smartphone From Amazon::frame_0015.jpg": {
+        "brands": [],
+        "text_visible": "",
+        "offline_refinement": true,
+        "frame": "frame_0015.jpg",
+        "source": "offline_refinement"
+      }
+    },
+    "model_mode": "offline_existing_predictions",
+    "prompt_refinement": "Use canonical brand names when visible text has punctuation variants, for example Coca Cola should be returned as Coca-Cola."
+  },
+  {
+    "run_id": "stage4_008",
+    "refinement_type": "false_positive_descriptor",
+    "refinement_description": "Do not put product descriptors, model names, slogans, or appliance design guesses in brands.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.88,
+    "delta": 0.07,
+    "accepted": true,
+    "reason": "F1 improved by 0.07; accepted for further validation.",
+    "frames": [
+      {
+        "video_id": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/Giada De Laurentiis\u2019 Favorite Pizza Rolls!/frame_0015.jpg"
+      },
+      {
+        "video_id": "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang",
+        "frame_id": "frame_0003.jpg",
+        "frame_path": "data/frames/The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang/frame_0003.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 11,
+        "false_positives": 0,
+        "false_negatives": 3,
+        "true_negative_frames": 24
+      },
+      "precision": 1.0,
+      "recall": 0.79,
+      "f1_score": 0.88
+    },
+    "model_outputs": {
+      "Giada De Laurentiis\u2019 Favorite Pizza Rolls!::frame_0015.jpg": {
+        "brands": [],
+        "text_visible": "",
+        "offline_refinement": true,
+        "frame": "frame_0015.jpg",
+        "source": "offline_refinement"
+      },
+      "The Best Burrata Pesto Pasta Recipe #asmrfood #mukbang::frame_0003.jpg": {
+        "brands": [
+          "chosen foods"
+        ],
+        "text_visible": "",
+        "offline_refinement": true,
+        "frame": "frame_0003.jpg",
+        "source": "offline_refinement"
+      }
+    },
+    "model_mode": "offline_existing_predictions",
+    "prompt_refinement": "Only include parent brand names in brands. Put product descriptors, model lines, flavors, slogans, and appliance guesses in products or text_visible instead."
+  },
+  {
+    "run_id": "stage4_009",
+    "refinement_type": "low_light_miss",
+    "refinement_description": "In low-light frames, inspect readable logos/text on apparel, hats, and background objects before returning brands.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.86,
+    "delta": 0.05,
+    "accepted": true,
+    "reason": "F1 improved by 0.05; accepted for further validation.",
+    "frames": [
+      {
+        "video_id": "The Cheapest Smartphone From Amazon",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 12,
+        "false_positives": 2,
+        "false_negatives": 2,
+        "true_negative_frames": 23
+      },
+      "precision": 0.86,
+      "recall": 0.86,
+      "f1_score": 0.86
+    },
+    "model_outputs": {
+      "The Cheapest Smartphone From Amazon::frame_0015.jpg": {
+        "brands": [
+          "champion"
+        ],
+        "text_visible": "back where it matters",
+        "offline_refinement": true,
+        "setting": "indoor",
+        "mood": "warm",
+        "actions": "person unboxing a product",
+        "products": [
+          "cap",
+          "shirt",
+          "product box"
+        ],
+        "people_count": 1,
+        "frame": "frame_0015.jpg",
+        "source": "offline_refinement"
+      }
+    },
+    "model_mode": "offline_existing_predictions",
+    "prompt_refinement": "For low-light frames, carefully inspect readable high-contrast marks on hats, hoodies, watermarks, app graphics, and package labels before deciding brands are absent."
+  },
+  {
+    "run_id": "stage4_010",
+    "refinement_type": "background_apparel_ambiguity",
+    "refinement_description": "Count readable secondary apparel and background logos as brands, while keeping them visually verified.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.9,
+    "delta": 0.09,
+    "accepted": true,
+    "reason": "F1 improved by 0.09; accepted for further validation.",
+    "frames": [
+      {
+        "video_id": "The Cheapest Smartphone From Amazon",
+        "frame_id": "frame_0015.jpg",
+        "frame_path": "data/frames/The Cheapest Smartphone From Amazon/frame_0015.jpg"
+      }
+    ],
+    "metrics": {
+      "confusion_matrix": {
+        "true_positives": 13,
+        "false_positives": 2,
+        "false_negatives": 1,
+        "true_negative_frames": 23
+      },
+      "precision": 0.87,
+      "recall": 0.93,
+      "f1_score": 0.9
+    },
+    "model_outputs": {
+      "The Cheapest Smartphone From Amazon::frame_0015.jpg": {
+        "brands": [
+          "champion",
+          "coca-cola"
+        ],
+        "text_visible": "back where it matters",
+        "offline_refinement": true,
+        "setting": "indoor",
+        "mood": "warm",
+        "actions": "person unboxing a product",
+        "products": [
+          "cap",
+          "shirt",
+          "product box"
+        ],
+        "people_count": 1,
+        "frame": "frame_0015.jpg",
+        "source": "offline_refinement"
+      }
+    },
+    "model_mode": "offline_existing_predictions",
+    "prompt_refinement": "Readable logos on apparel, hats, watermarks, and background objects count as visible brands even when they are not the primary product."
+  }
+]

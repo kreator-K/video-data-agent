@@ -1,0 +1,102 @@
+[
+  {
+    "run_id": "stage4_001",
+    "refinement_type": "parser_failure",
+    "refinement_description": "Re-emphasize strict JSON output and salvage valid JSON from markdown/prose-wrapped model responses.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.86,
+    "delta": 0.05,
+    "accepted": true,
+    "reason": "F1 improved by 0.05; accepted for further validation."
+  },
+  {
+    "run_id": "stage4_002",
+    "refinement_type": "brand_alias",
+    "refinement_description": "Normalize common brand spelling variants to canonical names before scoring.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.81,
+    "delta": 0.0,
+    "accepted": false,
+    "reason": "F1 did not improve over baseline 0.81; rejected."
+  },
+  {
+    "run_id": "stage4_003",
+    "refinement_type": "false_positive_descriptor",
+    "refinement_description": "Do not put product descriptors, model names, slogans, or appliance design guesses in brands.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.88,
+    "delta": 0.07,
+    "accepted": true,
+    "reason": "F1 improved by 0.07; accepted for further validation."
+  },
+  {
+    "run_id": "stage4_004",
+    "refinement_type": "low_light_miss",
+    "refinement_description": "In low-light frames, inspect readable logos/text on apparel, hats, and background objects before returning brands.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.86,
+    "delta": 0.05,
+    "accepted": true,
+    "reason": "F1 improved by 0.05; accepted for further validation."
+  },
+  {
+    "run_id": "stage4_005",
+    "refinement_type": "background_apparel_ambiguity",
+    "refinement_description": "Count readable secondary apparel and background logos as brands, while keeping them visually verified.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.9,
+    "delta": 0.09,
+    "accepted": true,
+    "reason": "F1 improved by 0.09; accepted for further validation."
+  },
+  {
+    "run_id": "stage4_006",
+    "refinement_type": "parser_failure",
+    "refinement_description": "Re-emphasize strict JSON output and salvage valid JSON from markdown/prose-wrapped model responses.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.86,
+    "delta": 0.05,
+    "accepted": true,
+    "reason": "F1 improved by 0.05; accepted for further validation."
+  },
+  {
+    "run_id": "stage4_007",
+    "refinement_type": "brand_alias",
+    "refinement_description": "Normalize common brand spelling variants to canonical names before scoring.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.81,
+    "delta": 0.0,
+    "accepted": false,
+    "reason": "F1 did not improve over baseline 0.81; rejected."
+  },
+  {
+    "run_id": "stage4_008",
+    "refinement_type": "false_positive_descriptor",
+    "refinement_description": "Do not put product descriptors, model names, slogans, or appliance design guesses in brands.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.88,
+    "delta": 0.07,
+    "accepted": true,
+    "reason": "F1 improved by 0.07; accepted for further validation."
+  },
+  {
+    "run_id": "stage4_009",
+    "refinement_type": "low_light_miss",
+    "refinement_description": "In low-light frames, inspect readable logos/text on apparel, hats, and background objects before returning brands.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.86,
+    "delta": 0.05,
+    "accepted": true,
+    "reason": "F1 improved by 0.05; accepted for further validation."
+  },
+  {
+    "run_id": "stage4_010",
+    "refinement_type": "background_apparel_ambiguity",
+    "refinement_description": "Count readable secondary apparel and background logos as brands, while keeping them visually verified.",
+    "baseline_f1": 0.81,
+    "refined_f1": 0.9,
+    "delta": 0.09,
+    "accepted": true,
+    "reason": "F1 improved by 0.09; accepted for further validation."
+  }
+]
