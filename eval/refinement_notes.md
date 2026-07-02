@@ -73,6 +73,33 @@ Refined F1:  0.90
 
 Full comparison: `eval/stage3_comparison.md`
 
+## Stage 4 Applied
+
+Added an automated prompt-refinement loop that tests candidate brand-scope rules
+against the Stage 3 outputs and selects the best rule set by F1, precision, and
+recall.
+
+Selected rule set:
+
+- Count readable brand names, logos, app icons, watermarks, and packaging brands
+  anywhere in the frame, including secondary apparel or background placements.
+- Do not infer a brand from product category, object shape, package style,
+  colors, or appliance design alone.
+- Only put appliance, hardware, or product-line text in brands when a readable
+  parent brand name or logo is visible.
+- If visible text looks like a model, series, slogan, or generic product
+  descriptor rather than a parent brand, place it in `text_visible` or
+  `products` instead of `brands`.
+
+Result on the same Stage 2 labels:
+
+```text
+Stage 3 F1: 0.90
+Stage 4 F1: 0.96
+```
+
+Full comparison: `eval/stage4_comparison.md`
+
 ## Instructions Not Used Yet
 
 - Bounding boxes/localization were not added because the current pipeline only

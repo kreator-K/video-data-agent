@@ -1,0 +1,9 @@
+{
+  "selected_candidate": "brand_evidence_scope_v1",
+  "prompt_rules": [
+    "Count readable brand names, logos, app icons, watermarks, and packaging brands anywhere in the frame, including secondary apparel or background placements.",
+    "Do not infer a brand from product category, object shape, package style, colors, or appliance design alone.",
+    "Only put appliance, hardware, or product-line text in brands when a readable parent brand name or logo is visible.",
+    "If visible text looks like a model, series, slogan, or generic product descriptor rather than a parent brand, place it in text_visible or products instead of brands."
+  ]
+}

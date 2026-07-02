@@ -60,12 +60,15 @@ Return a JSON object with exactly these fields:
 - setting: where this takes place (kitchen, outdoor, studio, etc.)
 - mood: visual mood (warm, bright, dark, energetic, calm, etc.)
 - actions: what is happening in this frame
-- brands: list of any visible brand names, logos, app icons, watermarks, or packaging brands (empty list if none)
+- brands: list of any readable visible brand names, logos, app icons, watermarks, or packaging brands, including secondary apparel/background placements (empty list if none)
 - products: list of visible products or food items
 - text_visible: any text or captions visible on screen
 - people_count: number of people visible
 
-Return ONLY valid JSON. No explanation, no markdown, just JSON. Do not infer a brand from product category, package shape, appliance shape, or colors alone."""
+Return ONLY valid JSON. No explanation, no markdown, just JSON.
+Do not infer a brand from product category, package shape, appliance shape, design cues, colors, or red knobs alone.
+Only include appliance, hardware, or product-line names in brands when a readable parent brand name or logo is visible.
+If visible text looks like a model, series, slogan, or generic product descriptor rather than a parent brand, put it in text_visible or products instead of brands."""
                     },
                     {
                         "type": "image_url",

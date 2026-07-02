@@ -1,0 +1,27 @@
+[
+  {
+    "video_id": "Bacon Wrapped Pizza Rolls \ud83d\udd25 Recipe in Description \ud83d\udc4d",
+    "frame_id": "frame_0006.jpg",
+    "ground_truth": [],
+    "stage3_prediction": [
+      "gravity series"
+    ],
+    "stage4_prediction": [],
+    "refinement_notes": [
+      "parsed_embedded_json",
+      "suppressed_unverified_appliance_or_product_line:gravity series"
+    ]
+  },
+  {
+    "video_id": "Giada De Laurentiis\u2019 Favorite Pizza Rolls!",
+    "frame_id": "frame_0015.jpg",
+    "ground_truth": [],
+    "stage3_prediction": [
+      "wolf"
+    ],
+    "stage4_prediction": [],
+    "refinement_notes": [
+      "suppressed_unverified_appliance_or_product_line:wolf"
+    ]
+  }
+]

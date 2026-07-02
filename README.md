@@ -218,11 +218,20 @@ Recall:    0.93
 F1 Score:  0.90
 ```
 
+Stage 4 adds an automated prompt-refinement loop for brand evidence scope:
+
+```text
+Precision: 1.00
+Recall:    0.93
+F1 Score:  0.96
+```
+
 Known failure patterns and the refinement comparison are tracked in:
 
 ```text
 eval/stage2_failure_report.md
 eval/stage3_comparison.md
+eval/stage4_comparison.md
 ```
 
 ## Project Structure
