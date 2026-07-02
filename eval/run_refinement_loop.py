@@ -359,7 +359,7 @@ def append_history(records: list[dict]) -> None:
     write_json(REFINEMENT_HISTORY_PATH, history)
 
 
-def run_loop(run_model: bool, model: str) -> list[dict]:
+def run_loop(run_model: bool, model: str, dry_run: bool = False) -> list[dict]:
     verify_protected_datasets()
 
     golden = load_json(GOLDEN_DATASET_PATH)
@@ -427,14 +427,16 @@ def run_loop(run_model: bool, model: str) -> list[dict]:
             }
         )
 
-    append_history(history_records)
-    write_json(REFINEMENT_RUNS_DIR / f"{history_records[0]['run_id']}_results.json", run_artifacts)
+    if not dry_run and history_records:
+        append_history(history_records)
+        write_json(REFINEMENT_RUNS_DIR / f"{history_records[0]['run_id']}_results.json", run_artifacts)
     return history_records
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description="Run grouped prompt-refinement experiments on Stage 2 failures.")
     parser.add_argument("--run-model", action="store_true", help="Call NVIDIA NIM vision model on failed frames.")
+    parser.add_argument("--dry-run", action="store_true", help="Evaluate refinements without writing history or artifacts.")
     parser.add_argument(
         "--model",
         default=os.getenv("NVIDIA_VISION_MODEL", DEFAULT_NVIDIA_VISION_MODEL),
@@ -442,8 +444,10 @@ def main() -> int:
     )
     args = parser.parse_args()
 
-    records = run_loop(run_model=args.run_model, model=args.model)
+    records = run_loop(run_model=args.run_model, model=args.model, dry_run=args.dry_run)
     print("\n--- Refinement Loop Results ---")
+    if args.dry_run:
+        print("Dry run: no history or run artifacts were written.")
     for record in records:
         status = "ACCEPTED" if record["accepted"] else "REJECTED"
         print(
@@ -451,7 +455,8 @@ def main() -> int:
             f"{record['baseline_f1']:.2f} -> {record['refined_f1']:.2f} "
             f"(delta {record['delta']:+.2f})"
         )
-    print(f"History appended to {REFINEMENT_HISTORY_PATH.relative_to(ROOT)}")
+    if not args.dry_run:
+        print(f"History appended to {REFINEMENT_HISTORY_PATH.relative_to(ROOT)}")
     return 0
 
 

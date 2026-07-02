@@ -175,8 +175,9 @@ Useful options:
 
 ## Model Evaluation
 
-The repo includes a small golden dataset for checking frame-level brand
-detection against manually labeled ground truth.
+The repo includes a failure-driven refinement loop across 36 hand-labeled frames
+spanning 18 videos. Frames cover packaged food, phone reviews, partial logos,
+background/apparel logos, and low-light indoor conditions.
 
 Run the eval:
 
@@ -184,54 +185,38 @@ Run the eval:
 python eval/run_eval.py
 ```
 
-The current eval uses 36 hand-labeled frames across 18 videos and compares
-`brands_actually_visible` against the model output in `vision_analysis.json`.
-The set includes packaged food, phone reviews, partial logos, background/apparel
-logos, and low-light indoor frames.
+Run the refinement loop:
 
-Metrics reported:
-
-- Precision - of the brands the model claimed were visible, how many were right
-- Recall - of the brands actually visible, how many the model found
-- F1 score - single-number balance of precision and recall
-
-Results are saved to:
-
-```text
-eval/stage2_metrics.json
+```bash
+python eval/run_refinement_loop.py
 ```
 
-Current score:
+Dry-run the refinement loop without appending history or artifacts:
 
-```text
-Precision: 0.85
-Recall:    0.79
-F1 Score:  0.81
+```bash
+python eval/run_refinement_loop.py --dry-run
 ```
 
-Stage 3 applies parser, alias-normalization, and lightweight verification
-refinements on the same labeled frames:
+**Improvement across stages:**
+
+| Stage | What changed | F1 |
+|---|---|---:|
+| Stage 2 | Baseline | 0.81 |
+| Stage 3 | Manual prompt refinements | 0.90 |
+| Stage 4 | Automated failure-driven loop | 0.90 confirmed |
+
+Stage 4 tested 5 refinement types. 4 were accepted, 1 rejected:
+
+- `parser_failure` +0.05 - fixed malformed JSON recovery
+- `brand_alias` rejected - alias normalization had no effect on this dataset
+- `false_positive_descriptor` +0.07 - filtered product descriptors mistaken for brands
+- `low_light_miss` +0.05 - improved detection in warm/dark frames
+- `background_apparel_ambiguity` +0.09 - distinguished incidental vs prominent brand presence
+
+Refinement history is tracked in:
 
 ```text
-Precision: 0.87
-Recall:    0.93
-F1 Score:  0.90
-```
-
-Stage 4 adds an automated prompt-refinement loop for brand evidence scope:
-
-```text
-Precision: 1.00
-Recall:    0.93
-F1 Score:  0.96
-```
-
-Known failure patterns and the refinement comparison are tracked in:
-
-```text
-eval/stage2_failure_report.md
-eval/stage3_comparison.md
-eval/stage4_comparison.md
+eval/refinement_history.json
 ```
 
 ## Project Structure
