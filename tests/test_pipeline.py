@@ -1138,21 +1138,113 @@ def test_downloader_retries_with_alternate_youtube_settings(monkeypatch, tmp_pat
     assert "extractor_args" in attempts[1]
 
 
-def test_downloader_uses_cookie_file(monkeypatch, tmp_path):
+def test_downloader_eventually_uses_broad_format_fallback(monkeypatch, tmp_path):
     import src.downloader as downloader
 
-    captured = {}
+    attempts = []
     downloaded = tmp_path / "video.mp4"
-    monkeypatch.setenv("YTDLP_COOKIES_FILE", str(tmp_path / "cookies.txt"))
 
     class FakeYDL:
         def __init__(self, opts):
-            captured.update(opts)
+            self.opts = opts
+            attempts.append(opts)
         def __enter__(self):
             return self
         def __exit__(self, *args):
             return False
         def extract_info(self, url, download=True):
+            if self.opts.get("format") != "bv*+ba/best":
+                raise RuntimeError("requested format is not available")
+            downloaded.write_bytes(b"video")
+            return {"title": "video", "ext": "mp4"}
+        def prepare_filename(self, info):
+            return str(downloaded)
+
+    monkeypatch.setattr(downloader.yt_dlp, "YoutubeDL", FakeYDL)
+
+    metadata = downloader.download_video("https://example.com/video", output_dir=str(tmp_path))
+
+    assert metadata["filepath"] == str(downloaded)
+    assert attempts[-1]["format"] == "bv*+ba/best"
+
+
+def test_downloader_format_failure_includes_diagnostics(monkeypatch, tmp_path):
+    import src.downloader as downloader
+
+    class FakeYDL:
+        def __init__(self, opts):
+            self.opts = opts
+        def __enter__(self):
+            return self
+        def __exit__(self, *args):
+            return False
+        def extract_info(self, url, download=True):
+            if download is False:
+                return {
+                    "formats": [
+                        {
+                            "format_id": "18",
+                            "ext": "mp4",
+                            "height": 360,
+                            "vcodec": "avc1",
+                            "acodec": "mp4a",
+                            "protocol": "https",
+                        }
+                    ]
+                }
+            raise RuntimeError("requested format is not available")
+        def prepare_filename(self, info):
+            return str(tmp_path / "missing.mp4")
+
+    monkeypatch.setattr(downloader.yt_dlp, "YoutubeDL", FakeYDL)
+
+    with pytest.raises(RuntimeError, match="Available formats: 18:mp4"):
+        downloader.download_video("https://example.com/video", output_dir=str(tmp_path))
+
+
+def test_downloader_stops_early_on_dns_error(monkeypatch, tmp_path):
+    import src.downloader as downloader
+
+    attempts = []
+
+    class FakeYDL:
+        def __init__(self, opts):
+            attempts.append(opts)
+        def __enter__(self):
+            return self
+        def __exit__(self, *args):
+            return False
+        def extract_info(self, url, download=True):
+            raise RuntimeError("Failed to resolve 'www.youtube.com'")
+        def prepare_filename(self, info):
+            return str(tmp_path / "missing.mp4")
+
+    monkeypatch.setattr(downloader.yt_dlp, "YoutubeDL", FakeYDL)
+
+    with pytest.raises(RuntimeError, match="Network/DNS error"):
+        downloader.download_video("https://example.com/video", output_dir=str(tmp_path))
+
+    assert len(attempts) == 1
+
+
+def test_downloader_uses_cookie_file(monkeypatch, tmp_path):
+    import src.downloader as downloader
+
+    attempts = []
+    downloaded = tmp_path / "video.mp4"
+    monkeypatch.setenv("YTDLP_COOKIES_FILE", str(tmp_path / "cookies.txt"))
+
+    class FakeYDL:
+        def __init__(self, opts):
+            self.opts = opts
+            attempts.append(opts)
+        def __enter__(self):
+            return self
+        def __exit__(self, *args):
+            return False
+        def extract_info(self, url, download=True):
+            if "cookiefile" not in self.opts:
+                raise RuntimeError("login required")
             downloaded.write_bytes(b"video")
             return {"title": "video", "ext": "mp4"}
         def prepare_filename(self, info):
@@ -1162,7 +1254,8 @@ def test_downloader_uses_cookie_file(monkeypatch, tmp_path):
 
     downloader.download_video("https://example.com/video", output_dir=str(tmp_path))
 
-    assert captured["cookiefile"].endswith("cookies.txt")
+    assert any("cookiefile" not in attempt for attempt in attempts)
+    assert attempts[-1]["cookiefile"].endswith("cookies.txt")
 
 
 def test_downloader_errors_when_downloaded_file_is_missing(monkeypatch, tmp_path):

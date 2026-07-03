@@ -24,7 +24,7 @@ def sanitized_video_path(filepath: str, title: str | None) -> Path:
     return path.with_name(clean_name)
 
 
-def youtube_cookie_options() -> dict:
+def configured_cookie_options() -> dict:
     cookies_file = os.getenv("YTDLP_COOKIES_FILE")
     cookies_browser = os.getenv("YTDLP_COOKIES_BROWSER")
 
@@ -36,41 +36,66 @@ def youtube_cookie_options() -> dict:
     return {}
 
 
-def base_ydl_options(output_dir: str) -> dict:
+FORMAT_SELECTORS = [
+    # Prefer a small mp4 video + m4a audio pair for reliable OpenCV/ffmpeg handling.
+    "bv*[height<=720][ext=mp4]+ba[ext=m4a]/b[height<=720][ext=mp4]/best[height<=720][ext=mp4]",
+    # Some videos expose webm/opus or non-mp4 video-only streams; ffmpeg can merge these to mp4.
+    "bv*[height<=720]+ba/b[height<=720]/best[height<=720]",
+    # Last-resort selector for unusual Shorts/age-gated/client-specific format sets.
+    "bv*+ba/best",
+]
+
+
+def base_ydl_options(output_dir: str, cookie_options: dict | None = None) -> dict:
     return {
-        "format": "bv*[height<=720][ext=mp4]+ba[ext=m4a]/b[height<=720][ext=mp4]/best[height<=720]",
+        "format": FORMAT_SELECTORS[0],
+        "format_sort": ["res:720", "ext:mp4:m4a"],
         "merge_output_format": "mp4",
         "outtmpl": f"{output_dir}/%(title)s.%(ext)s",
         "quiet": False,
         "noplaylist": True,
+        "retries": 1,
+        "fragment_retries": 1,
+        "extractor_retries": 1,
+        "socket_timeout": 20,
+        "continuedl": True,
         "windowsfilenames": True,
-        **youtube_cookie_options(),
+        **(cookie_options or {}),
     }
 
 
 def retry_ydl_options(output_dir: str) -> list[dict]:
-    common = base_ydl_options(output_dir)
-    return [
-        common,
-        {
-            **common,
-            "extractor_args": {
-                "youtube": {
-                    "player_client": ["android", "ios", "web"],
-                    "player_skip": ["webpage"],
-                }
-            },
-        },
-        {
-            **common,
-            "format": "best[height<=720]/best",
-            "extractor_args": {
-                "youtube": {
-                    "player_client": ["android"],
-                }
-            },
-        },
+    cookie_options = configured_cookie_options()
+    public_common = base_ydl_options(output_dir, cookie_options={})
+    cookie_common = base_ydl_options(output_dir, cookie_options=cookie_options) if cookie_options else None
+
+    public_profiles = [
+        ("public/default", {}),
+        (
+            "public/mobile",
+            {"extractor_args": {"youtube": {"player_client": ["android", "ios", "web"], "player_skip": ["webpage"]}}},
+        ),
+        ("public/android", {"extractor_args": {"youtube": {"player_client": ["android"]}}}),
     ]
+    attempts = [
+        {**public_common, **profile, "format": FORMAT_SELECTORS[0], "download_profile": name}
+        for name, profile in public_profiles
+    ]
+    attempts.extend(
+        [
+            {**public_common, "format": FORMAT_SELECTORS[1], "download_profile": "public/flexible"},
+            {**public_common, "format": FORMAT_SELECTORS[2], "download_profile": "public/broad"},
+        ]
+    )
+
+    if cookie_common:
+        attempts.extend(
+            [
+                {**cookie_common, "format": FORMAT_SELECTORS[0], "download_profile": "cookies/default"},
+                {**cookie_common, "format": FORMAT_SELECTORS[2], "download_profile": "cookies/broad"},
+            ]
+        )
+    return attempts
 
 
 def run_download(url: str, ydl_opts: dict) -> tuple[dict, Path]:
@@ -79,19 +104,75 @@ def run_download(url: str, ydl_opts: dict) -> tuple[dict, Path]:
         return info, Path(ydl.prepare_filename(info))
 
 
+def is_network_resolution_error(exc: Exception) -> bool:
+    text = str(exc).lower()
+    return (
+        "failed to resolve" in text
+        or "nodename nor servname provided" in text
+        or "name or service not known" in text
+        or "temporary failure in name resolution" in text
+    )
+
+
+def available_format_summary(url: str, output_dir: str) -> str:
+    opts = {
+        **base_ydl_options(output_dir, cookie_options={}),
+        "quiet": True,
+        "skip_download": True,
+        "format": None,
+    }
+    try:
+        with yt_dlp.YoutubeDL(opts) as ydl:
+            info = ydl.extract_info(url, download=False)
+    except Exception as exc:
+        return f"Could not inspect available formats: {exc}"
+
+    rows = []
+    for fmt in info.get("formats", []):
+        fmt_id = fmt.get("format_id")
+        ext = fmt.get("ext")
+        height = fmt.get("height")
+        vcodec = fmt.get("vcodec")
+        acodec = fmt.get("acodec")
+        protocol = fmt.get("protocol")
+        if fmt_id and ext not in {"mhtml", "storyboard"}:
+            rows.append(f"{fmt_id}:{ext}:h={height}:v={vcodec}:a={acodec}:p={protocol}")
+    if not rows:
+        return "No downloadable media formats were returned by yt-dlp."
+    return "Available formats: " + ", ".join(rows[:40])
+
+
 def download_video(url: str, output_dir: str = "data/videos") -> dict:
     Path(output_dir).mkdir(parents=True, exist_ok=True)
 
     last_error = None
+    errors = []
     for attempt, ydl_opts in enumerate(retry_ydl_options(output_dir), start=1):
         try:
             info, downloaded_path = run_download(url, ydl_opts)
             break
         except Exception as exc:
             last_error = exc
+            if is_network_resolution_error(exc):
+                raise RuntimeError(
+                    "Network/DNS error while contacting YouTube. Check your internet connection, VPN/DNS settings, "
+                    "or try again in a moment. The downloader stopped early instead of retrying every format fallback."
+                ) from exc
+            errors.append(
+                f"attempt {attempt} profile={ydl_opts.get('download_profile')} "
+                f"format={ydl_opts.get('format')}: {exc}"
+            )
             if attempt == len(retry_ydl_options(output_dir)):
-                raise
-            print(f"Download attempt {attempt} failed; retrying with alternate YouTube settings: {exc}")
+                diagnostic = available_format_summary(url, output_dir)
+                raise RuntimeError(
+                    "Video download failed after trying all format/client fallbacks.\n"
+                    + "\n".join(errors)
+                    + f"\n{diagnostic}"
+                ) from exc
+            print(
+                f"Download attempt {attempt}/{len(retry_ydl_options(output_dir))} "
+                f"failed ({ydl_opts.get('download_profile')}); trying next fallback: {exc}"
+            )
     else:
         raise RuntimeError(f"Video download failed: {last_error}")
 

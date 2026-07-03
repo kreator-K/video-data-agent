@@ -162,9 +162,37 @@ YTDLP_COOKIES_FILE=/path/to/cookies.txt
 YTDLP_COOKIES_BROWSER=chrome
 ```
 
-Use `YTDLP_COOKIES_FILE` or `YTDLP_COOKIES_BROWSER` when YouTube Shorts return
-403, consent, age, or bot-check errors. Downloaded titles are normalized before
-frame extraction so OpenCV receives the actual saved file path.
+Use `YTDLP_COOKIES_FILE` or `YTDLP_COOKIES_BROWSER` only when YouTube Shorts
+return 403, consent, age, or bot-check errors. Public/no-cookie download is
+tried first because browser cookies can push some public Shorts onto YouTube's
+SABR/challenge path where yt-dlp may only see image/storyboard formats.
+Downloaded titles are normalized before frame extraction so OpenCV receives the
+actual saved file path.
+
+### yt-dlp Format Troubleshooting
+
+YouTube Shorts can expose different format sets by region, age/auth state, or
+client profile. If yt-dlp says `requested format is not available`, it means the
+specific video/audio selector could not be matched for that URL. The downloader
+now tries these fallbacks automatically:
+
+1. mp4 video up to 720p plus m4a audio
+2. any video/audio pair up to 720p
+3. broad `bv*+ba/best` fallback
+4. cookie-based fallbacks only after public attempts fail
+
+If every fallback fails, the error prints the attempted selectors and the
+available formats returned by yt-dlp. That tells us whether the issue is format
+selection, cookies/auth, a private/removed video, or a YouTube extraction change.
+
+For cookie-gated videos, prefer exporting a cookie file and setting:
+
+```text
+YTDLP_COOKIES_FILE=/path/to/cookies.txt
+```
+
+`YTDLP_COOKIES_BROWSER=chrome` can work, but macOS may block/decrypt zero
+cookies, which produces warnings like `cannot decrypt v10 cookies`.
 
 ## Run
 
