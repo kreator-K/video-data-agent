@@ -10,7 +10,6 @@ Scope: 36 protected human-labeled frames.
 
 | Model | Provider | Precision | Recall | F1 | Error rate | Avg latency |
 |---|---|---:|---:|---:|---:|---:|
-| `meta/llama-4-maverick-17b-128e-instruct` | NVIDIA | 0.48 | 0.86 | 0.62 | 0.00 | 1683 ms |
 | `meta/llama-3.2-90b-vision-instruct` | NVIDIA | 0.44 | 0.79 | 0.56 | 0.00 | 9354 ms |
 | `nvidia/nemotron-nano-12b-v2-vl` | NVIDIA | 0.47 | 0.50 | 0.48 | 0.00 | 2990 ms |
 | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` | NVIDIA | 0.00 | 0.00 | 0.00 | 0.00 | 4397 ms |
@@ -18,13 +17,14 @@ Scope: 36 protected human-labeled frames.
 
 ## Selection
 
-Current recommended NVIDIA vision model:
+Current NVIDIA vision fallback/default:
 
 ```text
-meta/llama-4-maverick-17b-128e-instruct
+meta/llama-3.2-90b-vision-instruct
 ```
 
-Reason: highest F1 on the protected human-labeled set, highest recall among successful models, and the lowest average latency among the top two models.
+Reason: selected for the current production/eval path after the unavailable
+retired endpoint was removed from active configuration.
 
 ## Notes
 
@@ -32,6 +32,26 @@ Reason: highest F1 on the protected human-labeled set, highest recall among succ
 - Nemotron 3 Nano Omni 30B A3B Reasoning was reachable, but returned prose instead of the required JSON object for all 36 frames. JSON parse success was `0.00`, so it produced no scoreable brand predictions under the current eval contract.
 - The submitted Shorts are included in the promoted Stage 5 dataset after human review.
 - Raw results are stored in `eval/model_ab_results.json`.
+- The unavailable retired endpoint was removed from active defaults and tiers after NVIDIA returned `410 Gone`.
+
+## E2E Smoke Test
+
+Run date: 2026-08-19
+
+Command:
+
+```bash
+.venv/bin/python main.py "https://www.youtube.com/shorts/alg9ydZDre0"
+```
+
+Result:
+
+- Download: passed
+- Frame extraction: 26 frames extracted
+- Transcription: 14 Whisper segments
+- Vision analysis: 9/9 sampled frames analysed
+- Vision fallback: OpenAI returned quota/rate limit; NVIDIA fallback used `meta/llama-3.2-90b-vision-instruct`
+- Final report: saved successfully
 
 ## Stage 5 Prompt Check
 
@@ -41,8 +61,8 @@ Scope: 360 human-reviewed frames across 47 videos.
 
 | Model / prompt | Precision | Recall | F1 | FP | FN | Error rate | Avg latency |
 |---|---:|---:|---:|---:|---:|---:|---:|
-| `meta/llama-4-maverick-17b-128e-instruct` default prompt | 0.30 | 0.57 | 0.39 | 183 | 58 | 0.00 | 1704 ms |
-| `meta/llama-4-maverick-17b-128e-instruct` strict precision prompt | 0.32 | 0.52 | 0.39 | 151 | 65 | 0.00 | 1712 ms |
+| current default prompt | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun |
+| current strict precision prompt | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun |
 
 Use `strict_precision` for user-facing reports where false positives are costly
 and "no visible brand/name detected" should be conservative. Use the default

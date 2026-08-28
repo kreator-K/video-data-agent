@@ -26,7 +26,6 @@ MODEL_TIERS_PATH = ROOT / "eval/model_tiers.json"
 DEFAULT_MODELS = [
     "meta/llama-3.2-11b-vision-instruct",
     "meta/llama-3.2-90b-vision-instruct",
-    "meta/llama-4-maverick-17b-128e-instruct",
     "nvidia/nemotron-nano-12b-v2-vl",
 ]
 

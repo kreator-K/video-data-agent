@@ -131,8 +131,9 @@ OPENAI_API_KEY=your_openai_key_here
 NVIDIA_API_KEY=your_nvidia_key_here
 ```
 
-`OPENAI_API_KEY` powers frame-level vision analysis. `NVIDIA_API_KEY` powers
-the final text synthesis step.
+`OPENAI_API_KEY` powers the primary frame-level vision analysis when the default
+OpenAI vision model is used. `NVIDIA_API_KEY` or `NVIDIA_API_KEYS` powers the
+NVIDIA vision fallback and the final text synthesis step.
 
 If you have multiple NVIDIA keys, use `NVIDIA_API_KEYS` instead. Separate keys
 with commas; the pipeline will try the next key if one fails or hits a limit:
@@ -155,7 +156,7 @@ VISION_MODEL=gpt-4o
 VISION_BASE_URL=
 VISION_API_KEY=
 REPORT_MODEL=meta/llama-3.1-8b-instruct
-NVIDIA_VISION_MODEL=meta/llama-3.2-11b-vision-instruct
+NVIDIA_VISION_MODEL=meta/llama-3.2-90b-vision-instruct
 NVIDIA_API_KEYS=nvapi-key-one,nvapi-key-two
 MOONSHOT_API_KEYS=moonshot-key-one,moonshot-key-two
 YTDLP_COOKIES_FILE=/path/to/cookies.txt
@@ -386,7 +387,7 @@ Model tiers live in `eval/model_tiers.json`:
 |---|---|---|
 | `baseline` | Regression check against the current lightweight baseline | Llama 3.2 11B Vision |
 | `balanced` | Routine shortlist with stronger vision and smaller sweep | Llama 3.2 90B Vision, Nemotron Nano 12B VL |
-| `accuracy` | Recommended selection tier for the default model | Llama 3.2 90B Vision, Llama 4 Maverick, Nemotron Nano 12B VL |
+| `accuracy` | Recommended selection tier for the default model | Llama 3.2 90B Vision |
 | `experimental` | Endpoint-id or JSON-contract validation before quality comparison | Kimi K2.6, Nemotron 3 Nano Omni 30B A3B Reasoning |
 | `full` | Full sweep including baseline and all current candidates | All configured candidates |
 
@@ -405,14 +406,11 @@ python eval/run_model_ab.py --run-model --models meta/llama-3.2-90b-vision-instr
 Current accuracy-tier candidates:
 
 - `meta/llama-3.2-90b-vision-instruct`
-- `meta/llama-4-maverick-17b-128e-instruct`
-- `nvidia/nemotron-nano-12b-v2-vl`
 
 The latest live run on the protected 36-frame human-labeled set selected:
 
 | Model | Precision | Recall | F1 | Error rate | Avg latency |
 |---|---:|---:|---:|---:|---:|
-| `meta/llama-4-maverick-17b-128e-instruct` | 0.48 | 0.86 | 0.62 | 0.00 | 1683 ms |
 | `meta/llama-3.2-90b-vision-instruct` | 0.44 | 0.79 | 0.56 | 0.00 | 9354 ms |
 | `nvidia/nemotron-nano-12b-v2-vl` | 0.47 | 0.50 | 0.48 | 0.00 | 2990 ms |
 | `nvidia/nemotron-3-nano-omni-30b-a3b-reasoning` | 0.00 | 0.00 | 0.00 | 0.00 | 4397 ms |
@@ -421,8 +419,11 @@ The latest live run on the protected 36-frame human-labeled set selected:
 Current default NVIDIA vision model:
 
 ```text
-meta/llama-4-maverick-17b-128e-instruct
+meta/llama-3.2-90b-vision-instruct
 ```
+
+The unavailable retired endpoint has been removed from the active tier config.
+Use `meta/llama-3.2-90b-vision-instruct` for the current NVIDIA vision fallback.
 
 Kimi is currently tracked as experimental because the NVIDIA-hosted model id
 `kimi-k2.6` returned `404 page not found` for every frame. Once the exact
@@ -444,8 +445,8 @@ frames:
 
 | Dataset | Model / prompt | Precision | Recall | F1 |
 |---|---|---:|---:|---:|
-| Stage 5, 360 reviewed frames | `meta/llama-4-maverick-17b-128e-instruct` default prompt | 0.30 | 0.57 | 0.39 |
-| Stage 5, 360 reviewed frames | `meta/llama-4-maverick-17b-128e-instruct` strict precision prompt | 0.32 | 0.52 | 0.39 |
+| Stage 5, 360 reviewed frames | current default prompt | pending rerun | pending rerun | pending rerun |
+| Stage 5, 360 reviewed frames | current strict precision prompt | pending rerun | pending rerun | pending rerun |
 
 The Stage 5 failure pattern is precision-heavy: the model finds many plausible
 brands but over-predicts brands that are not visibly present or not accepted in

@@ -2,14 +2,25 @@ import os
 
 
 DEFAULT_VISION_MODEL = "gpt-4o"
-DEFAULT_REPORT_MODEL = "meta/llama-3.1-8b-instruct"
-DEFAULT_NVIDIA_VISION_MODEL = "meta/llama-4-maverick-17b-128e-instruct"
+DEFAULT_REPORT_MODEL = "meta/llama-3.2-90b-vision-instruct"
+DEFAULT_NVIDIA_VISION_MODEL = "meta/llama-3.2-90b-vision-instruct"
 NVIDIA_BASE_URL = "https://integrate.api.nvidia.com/v1"
 MOONSHOT_BASE_URL = "https://api.moonshot.ai/v1"
+DEFAULT_API_REQUEST_TIMEOUT_SECONDS = 30.0
 
 
 def vision_model() -> str:
     return os.getenv("VISION_MODEL", DEFAULT_VISION_MODEL)
+
+
+def api_request_timeout_seconds() -> float:
+    value = os.getenv("API_REQUEST_TIMEOUT_SECONDS")
+    if not value:
+        return DEFAULT_API_REQUEST_TIMEOUT_SECONDS
+    try:
+        return max(float(value), 1.0)
+    except ValueError:
+        return DEFAULT_API_REQUEST_TIMEOUT_SECONDS
 
 
 def report_model() -> str:

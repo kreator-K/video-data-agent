@@ -8,8 +8,8 @@ Scope: 360 human-reviewed/promoted frames across 47 videos.
 
 | Model | Precision | Recall | F1 | TP | FP | FN | Error rate | Avg latency |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| `meta/llama-4-maverick-17b-128e-instruct` default prompt | 0.30 | 0.57 | 0.39 | 77 | 183 | 58 | 0.00 | 1704 ms |
-| `meta/llama-4-maverick-17b-128e-instruct` strict precision prompt | 0.32 | 0.52 | 0.39 | 70 | 151 | 65 | 0.00 | 1712 ms |
+| current default prompt | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun |
+| current strict precision prompt | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun | pending rerun |
 
 Small same-slice prompt check on the first 50 Stage 5 frames:
 

@@ -280,6 +280,25 @@ def test_api_timeout(monkeypatch, tmp_path):
     assert vision.analyse_frame(str(image))["error"] == "api_error"
 
 
+def test_vision_falls_back_to_nvidia_on_primary_quota(monkeypatch, tmp_path):
+    import src.vision_analyser as vision
+
+    image = tmp_path / "frame.jpg"
+    image.write_bytes(b"image")
+    primary_create = Mock(side_effect=RuntimeError("429 credit_balance_exhausted"))
+    fallback_create = Mock(return_value=fake_chat_response('{"brands":["Panda Express"],"products":[]}'))
+    fallback_client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=fallback_create)))
+    monkeypatch.setattr(vision.client.chat.completions, "create", primary_create)
+    monkeypatch.setattr(vision, "build_nvidia_clients", lambda: [fallback_client])
+    monkeypatch.setattr(vision, "nvidia_vision_model", lambda: "meta/llama-3.2-90b-vision-instruct")
+
+    result = vision.analyse_frame(str(image))
+
+    assert result["brands"] == ["Panda Express"]
+    assert result["vision_provider_used"] == "nvidia_fallback"
+    assert fallback_create.call_count == 1
+
+
 def test_refusal_detected(monkeypatch, tmp_path):
     import src.vision_analyser as vision
 
@@ -309,11 +328,27 @@ def test_moonshot_api_keys_parse_comma_separated_pool(monkeypatch):
     assert model_config.moonshot_api_keys() == ["moon-a", "moon-b"]
 
 
+def test_api_request_timeout_uses_valid_env_value(monkeypatch):
+    from src.model_config import api_request_timeout_seconds
+
+    monkeypatch.setenv("API_REQUEST_TIMEOUT_SECONDS", "12.5")
+
+    assert api_request_timeout_seconds() == 12.5
+
+
+def test_shared_json_parser_recovers_fenced_object_from_prose():
+    from src.json_utils import parse_json_object
+
+    parsed = parse_json_object('Result:\n```json\n{"brands": ["Apple"]}\n```\nDone.')
+
+    assert parsed == {"brands": ["Apple"]}
+
+
 def test_missing_transcript(monkeypatch, sample_metadata):
     import src.synthesiser as synthesiser
 
     create = Mock(return_value=fake_chat_response('{"video_summary":"ok"}'))
-    monkeypatch.setenv("REPORT_MODEL", "meta/llama-4-maverick-17b-128e-instruct")
+    monkeypatch.setenv("REPORT_MODEL", "meta/llama-3.2-90b-vision-instruct")
     monkeypatch.setattr(synthesiser.client.chat.completions, "create", create)
     monkeypatch.setattr(synthesiser, "nvidia_clients", lambda: [synthesiser.client])
 
@@ -321,7 +356,7 @@ def test_missing_transcript(monkeypatch, sample_metadata):
 
     assert report["video_summary"] == "ok"
     assert report["brand_manager_actions"] == []
-    assert create.call_args.kwargs["model"] == "meta/llama-4-maverick-17b-128e-instruct"
+    assert create.call_args.kwargs["model"] == "meta/llama-3.2-90b-vision-instruct"
 
 
 def test_synthesis_retries_next_nvidia_key(monkeypatch, sample_metadata):
@@ -446,6 +481,43 @@ def test_brand_evidence_keeps_audio_screen_and_description_sources(monkeypatch, 
     assert report["all_detected_brand_names"] == ["Costco", "Kirkland", "Great Value"]
     assert report["brand_presence_summary"] == "Brand/name evidence found: Costco, Kirkland, Great Value."
     assert report["primary_brands"] == ["Costco", "Kirkland", "Great Value"]
+
+
+def test_text_name_candidates_include_known_lowercase_brands():
+    from src.synthesiser import extract_text_name_candidates
+
+    text = "lastly we got burger king and the whopper is a masterpiece. panda express wins over mcdonald's."
+
+    assert extract_text_name_candidates(text) == ["Burger King", "McDonald's", "Panda Express", "Whopper"]
+
+
+def test_recipe_title_is_not_promoted_to_brand_evidence(monkeypatch, sample_metadata):
+    import src.synthesiser as synthesiser
+
+    model_report = {
+        "video_summary": "ok",
+        "primary_brands": ["4th of July puppy chow", "Rice Chex"],
+        "brand_evidence": {
+            "visible_in_frames": [],
+            "on_screen_text": ["4th of July puppy chow"],
+            "mentioned_in_audio": [],
+            "mentioned_in_description": ["Rice Chex", "M&M's"],
+        },
+    }
+    monkeypatch.setattr(synthesiser.client.chat.completions, "create", Mock(return_value=fake_chat_response(json.dumps(model_report))))
+    monkeypatch.setattr(synthesiser, "nvidia_clients", lambda: [synthesiser.client])
+
+    report = synthesiser.synthesise_insights(
+        {
+            "metadata": sample_metadata,
+            "transcript": {"text": ""},
+            "vision": [{"brands": [], "text_visible": "4th of July puppy chow"}],
+        }
+    )
+
+    assert report["brand_evidence"]["on_screen_text"] == []
+    assert report["brand_evidence"]["mentioned_in_description"] == ["Rice Chex", "M&M's"]
+    assert report["primary_brands"] == ["Rice Chex", "M&M's"]
 
 
 def test_missing_brand_manager_actions(monkeypatch, sample_metadata):

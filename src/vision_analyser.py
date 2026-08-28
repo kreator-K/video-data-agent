@@ -1,10 +1,18 @@
 import openai
 import base64
 import json
-import re
 from pathlib import Path
 from dotenv import load_dotenv
-from src.model_config import vision_api_key, vision_base_url, vision_model
+from src.json_utils import parse_json_object
+from src.model_config import (
+    api_request_timeout_seconds,
+    nvidia_vision_model,
+    vision_api_key,
+    vision_base_url,
+    vision_model,
+)
+from src.nvidia import build_nvidia_clients as build_configured_nvidia_clients
+from src.nvidia import call_with_client_fallback
 
 # Load API keys from .env file
 load_dotenv()
@@ -12,7 +20,11 @@ load_dotenv()
 
 def build_client() -> openai.OpenAI:
     base_url = vision_base_url()
-    kwargs = {"api_key": vision_api_key()}
+    kwargs = {
+        "api_key": vision_api_key(),
+        "timeout": api_request_timeout_seconds(),
+        "max_retries": 0,
+    }
     if base_url:
         kwargs["base_url"] = base_url
     return openai.OpenAI(**kwargs)
@@ -21,6 +33,22 @@ def build_client() -> openai.OpenAI:
 client = build_client()
 NO_VISIBLE_BRAND_MESSAGE = "No visible brand, company, shop, restaurant, or firm name detected."
 
+VISION_PROMPT = """Analyse this video frame for brand intelligence.
+Return a JSON object with exactly these fields:
+- setting: where this takes place (kitchen, outdoor, studio, etc.)
+- mood: visual mood (warm, bright, dark, energetic, calm, etc.)
+- actions: what is happening in this frame
+- brands: list of any readable visible brand, company, shop, restaurant, firm, creator watermark, app icon, logo, or packaging name, including secondary apparel/background placements (empty list if none)
+- products: list of visible products or food items
+- text_visible: any text or captions visible on screen
+- people_count: number of people visible
+
+Return ONLY valid JSON. No explanation, no markdown, just JSON.
+Do not infer a brand from product category, package shape, appliance shape, design cues, colors, or red knobs alone.
+Only include appliance, hardware, or product-line names in brands when a readable parent brand name or logo is visible.
+If no readable brand/company/shop/restaurant/firm name is visible, return brands as an empty list.
+If visible text looks like a model, series, slogan, or generic product descriptor rather than a parent brand, put it in text_visible or products instead of brands."""
+
 
 def encode_image(image_path: str) -> str:
     """Converts an image file to base64 string for API transmission."""
@@ -28,36 +56,68 @@ def encode_image(image_path: str) -> str:
         return base64.b64encode(f.read()).decode("utf-8")
 
 
-def parse_json_response(raw: str) -> dict:
-    """
-    Parse strict JSON, fenced JSON, or prose that contains one JSON object.
-    """
-    text = raw.strip()
+def build_nvidia_clients() -> list[openai.OpenAI]:
+    return build_configured_nvidia_clients()
 
-    if "```" in text:
-        fenced = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", text, re.DOTALL)
-        if fenced:
-            text = fenced.group(1).strip()
 
+def is_quota_error(exc: Exception) -> bool:
+    text = str(exc).lower()
+    return (
+        "429" in text
+        or "insufficient_quota" in text
+        or "credit_balance_exhausted" in text
+        or "quota" in text
+        or "rate limit" in text
+    )
+
+
+def create_vision_completion(api_client: openai.OpenAI, model: str, base64_image: str):
+    return api_client.chat.completions.create(
+        model=model,
+        messages=[
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": VISION_PROMPT},
+                    {
+                        "type": "image_url",
+                        "image_url": {
+                            "url": f"data:image/jpeg;base64,{base64_image}",
+                            "detail": "low"
+                        }
+                    }
+                ]
+            }
+        ],
+        max_tokens=300
+    )
+
+
+def create_completion_with_fallback(base64_image: str):
     try:
-        parsed = json.loads(text)
-        if not isinstance(parsed, dict):
-            raise json.JSONDecodeError("Expected JSON object", text, 0)
-        parsed.setdefault("brands", [])
-        return parsed
-    except json.JSONDecodeError:
-        pass
+        return create_vision_completion(client, vision_model(), base64_image), vision_model(), "primary"
+    except Exception as exc:
+        if not is_quota_error(exc):
+            raise
+        fallback_clients = build_nvidia_clients()
+        if fallback_clients:
+            print("Primary vision model quota/rate limit hit; retrying with NVIDIA vision fallback.")
+        else:
+            raise exc
+        response, key_index = call_with_client_fallback(
+            fallback_clients,
+            lambda api_client: create_vision_completion(api_client, nvidia_vision_model(), base64_image),
+            "NVIDIA vision fallback failed; retrying with the next configured key.",
+        )
+        provider = "nvidia_fallback" if key_index == 1 else "nvidia_fallback_key_retry"
+        return response, nvidia_vision_model(), provider
 
-    start = text.find("{")
-    end = text.rfind("}")
-    if start != -1 and end != -1 and end > start:
-        parsed = json.loads(text[start:end + 1])
-        if not isinstance(parsed, dict):
-            raise json.JSONDecodeError("Expected JSON object", text, 0)
-        parsed.setdefault("brands", [])
-        return parsed
 
-    raise json.JSONDecodeError("No JSON object found", raw, 0)
+def parse_json_response(raw: str) -> dict:
+    """Parse a model response and ensure the expected brands field is present."""
+    parsed = parse_json_object(raw)
+    parsed.setdefault("brands", [])
+    return parsed
 
 
 def add_brand_visibility_status(analysis: dict) -> dict:
@@ -96,42 +156,7 @@ def analyse_frame(image_path: str) -> dict:
         return {"error": "image_read_error", "message": str(exc), "frame_path": image_path}
 
     try:
-        response = client.chat.completions.create(
-            model=vision_model(),
-            messages=[
-                {
-                    "role": "user",
-                    "content": [
-                        {
-                            "type": "text",
-                            "text": """Analyse this video frame for brand intelligence. 
-Return a JSON object with exactly these fields:
-- setting: where this takes place (kitchen, outdoor, studio, etc.)
-- mood: visual mood (warm, bright, dark, energetic, calm, etc.)
-- actions: what is happening in this frame
-- brands: list of any readable visible brand, company, shop, restaurant, firm, creator watermark, app icon, logo, or packaging name, including secondary apparel/background placements (empty list if none)
-- products: list of visible products or food items
-- text_visible: any text or captions visible on screen
-- people_count: number of people visible
-
-Return ONLY valid JSON. No explanation, no markdown, just JSON.
-Do not infer a brand from product category, package shape, appliance shape, design cues, colors, or red knobs alone.
-Only include appliance, hardware, or product-line names in brands when a readable parent brand name or logo is visible.
-If no readable brand/company/shop/restaurant/firm name is visible, return brands as an empty list.
-If visible text looks like a model, series, slogan, or generic product descriptor rather than a parent brand, put it in text_visible or products instead of brands."""
-                        },
-                        {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": f"data:image/jpeg;base64,{base64_image}",
-                                "detail": "low"
-                            }
-                        }
-                    ]
-                }
-            ],
-            max_tokens=300
-        )
+        response, model_used, provider_used = create_completion_with_fallback(base64_image)
     except Exception as exc:
         return {"error": "api_error", "message": str(exc)}
 
@@ -158,7 +183,10 @@ If visible text looks like a model, series, slogan, or generic product descripto
         if "i'm sorry" in raw.lower() or "i can’t" in raw.lower() or "i can't" in raw.lower():
             return {"error": "model_refusal", "raw_response": raw}
         try:
-            return add_brand_visibility_status(parse_json_response(raw))
+            parsed = add_brand_visibility_status(parse_json_response(raw))
+            parsed["vision_model_used"] = model_used
+            parsed["vision_provider_used"] = provider_used
+            return parsed
         except json.JSONDecodeError:
             return {"raw_response": raw}
 
@@ -187,7 +215,7 @@ def analyse_video_frames(frames_dir: str, sample_every: int = 3) -> list:
     sampled = frames[::sample_every]
 
     print(f"\nAnalysing {len(sampled)} frames (sampled from {len(frames)} total)...")
-    print("This will use your OpenAI credits — estimated cost: < $0.10\n")
+    print("This will use your configured vision model credits — estimated cost: < $0.10\n")
 
     results = []
     for i, frame_path in enumerate(sampled):

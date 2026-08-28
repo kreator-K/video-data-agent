@@ -3,15 +3,14 @@ import re
 from pathlib import Path
 from openai import OpenAI
 from dotenv import load_dotenv
-from src.model_config import NVIDIA_BASE_URL, nvidia_api_key, nvidia_api_keys, report_model
+from src.json_utils import parse_json_object
+from src.model_config import nvidia_api_key, report_model
+from src.nvidia import build_nvidia_client, build_nvidia_clients, call_with_client_fallback
 
 load_dotenv()
 
 # Using Nvidia for synthesis too — free, text-only model
-client = OpenAI(
-    base_url=NVIDIA_BASE_URL,
-    api_key=nvidia_api_key()
-)
+client = build_nvidia_client(nvidia_api_key())
 
 REPORT_DEFAULTS = {
     "video_summary": "",
@@ -47,6 +46,7 @@ TEXT_NAME_STOPWORDS = {
     "first",
     "fourth",
     "fourth of july",
+    "4th of july puppy chow",
     "heat treat cake mix",
     "here's",
     "i'd",
@@ -75,6 +75,9 @@ TEXT_NAME_STOPWORDS = {
     "unfortunately",
     "which",
 }
+NON_BRAND_SUBSTRINGS = {
+    "puppy chow",
+}
 KNOWN_SINGLE_NAME_CANDIDATES = {
     "cheerios",
     "chex",
@@ -84,13 +87,19 @@ KNOWN_SINGLE_NAME_CANDIDATES = {
     "mcnuggies",
     "whopper",
 }
+KNOWN_TEXT_NAME_PHRASES = {
+    "burger king": "Burger King",
+    "mcdonald's": "McDonald's",
+    "mcnuggies": "McNuggies",
+    "panda express": "Panda Express",
+    "rice chex": "Rice Chex",
+    "the whopper": "Whopper",
+    "whopper": "Whopper",
+}
 
 
 def nvidia_clients() -> list[OpenAI]:
-    keys = nvidia_api_keys()
-    if len(keys) <= 1:
-        return [client]
-    return [OpenAI(base_url=NVIDIA_BASE_URL, api_key=key) for key in keys]
+    return build_nvidia_clients() or [client]
 
 
 def load_video_data(video_name: str) -> dict:
@@ -156,6 +165,21 @@ def unique_names(values: list) -> list[str]:
     return names
 
 
+def is_brand_name_candidate(value: str) -> bool:
+    key = str(value).strip().lower()
+    if not key:
+        return False
+    if key in {"none", "n/a", "no brand", "no brands", "no visible brand"}:
+        return False
+    if key in TEXT_NAME_STOPWORDS:
+        return False
+    return not any(fragment in key for fragment in NON_BRAND_SUBSTRINGS)
+
+
+def clean_brand_names(values: list) -> list[str]:
+    return unique_names([value for value in values if is_brand_name_candidate(str(value))])
+
+
 def collect_on_screen_text(frames: list[dict]) -> list[str]:
     text_values = []
     for frame in frames:
@@ -172,6 +196,11 @@ def extract_text_name_candidates(text: str) -> list[str]:
         return []
 
     candidates = []
+    lower_text = text.lower()
+    for phrase, canonical in KNOWN_TEXT_NAME_PHRASES.items():
+        if re.search(rf"\b{re.escape(phrase)}\b", lower_text):
+            candidates.append(canonical)
+
     pattern = re.compile(r"\b(?:M&M'?s?|[A-Z][A-Za-z0-9&'’]*(?:\s+[A-Z][A-Za-z0-9&'’]*){0,3})\b")
     for match in pattern.finditer(text):
         candidate = re.sub(r"\s+", " ", match.group(0)).strip(" .,:;!?#()[]{}")
@@ -202,10 +231,10 @@ def normalize_brand_evidence(
     if not isinstance(evidence, dict):
         evidence = {}
 
-    visible = unique_names([*visible_brands, *evidence.get("visible_in_frames", [])])
-    on_screen = unique_names(evidence.get("on_screen_text", []))
-    audio = unique_names([*(evidence.get("mentioned_in_audio", []) or []), *(transcript_candidates or [])])
-    description = unique_names([*(evidence.get("mentioned_in_description", []) or []), *(description_candidates or [])])
+    visible = clean_brand_names([*visible_brands, *evidence.get("visible_in_frames", [])])
+    on_screen = clean_brand_names(evidence.get("on_screen_text", []))
+    audio = clean_brand_names([*(evidence.get("mentioned_in_audio", []) or []), *(transcript_candidates or [])])
+    description = clean_brand_names([*(evidence.get("mentioned_in_description", []) or []), *(description_candidates or [])])
     all_names = unique_names([*visible, *on_screen, *audio, *description])
 
     report["brand_evidence"] = {
@@ -221,7 +250,7 @@ def normalize_brand_evidence(
         else "No brand, company, shop, restaurant, or firm name detected in frames, on-screen text, audio transcript, or video description."
     )
     if all_names:
-        report["primary_brands"] = unique_names(report.get("primary_brands", []) or all_names)
+        report["primary_brands"] = clean_brand_names(report.get("primary_brands", []) or all_names)
     else:
         report["primary_brands"] = []
     return report
@@ -306,38 +335,21 @@ Return ONLY valid JSON. No explanation, no markdown."""
 
     print("\nSynthesising insights...")
 
-    clients = nvidia_clients()
-    last_error = None
-    for index, api_client in enumerate(clients, start=1):
-        try:
-            response = api_client.chat.completions.create(
-                model=report_model(),
-                messages=[{"role": "user", "content": prompt}],
-                max_tokens=1000
-            )
-            break
-        except Exception as exc:
-            last_error = exc
-            if index == len(clients):
-                raise
-            print("NVIDIA synthesis call failed; retrying with the next configured key.")
-    else:
-        raise RuntimeError(f"NVIDIA synthesis failed: {last_error}")
+    response, _ = call_with_client_fallback(
+        nvidia_clients(),
+        lambda api_client: api_client.chat.completions.create(
+            model=report_model(),
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=1000,
+        ),
+        "NVIDIA synthesis call failed; retrying with the next configured key.",
+    )
 
     raw = response.choices[0].message.content.strip()
 
-    # Strip markdown fences if model adds them
-    if "```" in raw:
-        raw = raw.split("```")[1]
-        if raw.startswith("json"):
-            raw = raw[4:]
-        raw = raw.strip()
-
     try:
-        report = json.loads(raw)
+        report = parse_json_object(raw)
     except json.JSONDecodeError:
-        return {"raw_report": raw}
-    if not isinstance(report, dict):
         return {"raw_report": raw}
     merged = normalize_brand_evidence(
         {**REPORT_DEFAULTS, **report, **brand_visibility},

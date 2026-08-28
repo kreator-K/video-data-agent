@@ -1,8 +1,9 @@
 import html
-import json
 from collections import defaultdict
 from pathlib import Path
 from urllib.parse import quote
+
+from common import load_json, write_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -10,14 +11,6 @@ CANDIDATES_PATH = ROOT / "eval/golden_dataset_stage5_candidates.json"
 LABELS_PATH = ROOT / "eval/stage5_labels.json"
 GALLERY_PATH = ROOT / "eval/stage5_review_gallery.html"
 DECISIONS_TEMPLATE_PATH = ROOT / "eval/stage5_review_decisions_template.json"
-
-
-def load_json(path: Path):
-    return json.loads(path.read_text())
-
-
-def write_json(path: Path, data) -> None:
-    path.write_text(json.dumps(data, indent=2) + "\n")
 
 
 def frame_src(video: str, frame: str) -> str:

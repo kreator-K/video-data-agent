@@ -1,6 +1,7 @@
-import json
 from collections import defaultdict
 from pathlib import Path
+
+from common import load_json, write_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -14,14 +15,6 @@ STAGE5_REPORT_PATH = ROOT / "eval/stage5_expansion_report.md"
 MIN_FRAMES_PER_VIDEO = 5
 MAX_DEFAULT_FRAMES_PER_VIDEO = 10
 MAX_EXTENDED_FRAMES_PER_VIDEO = 15
-
-
-def load_json(path: Path):
-    return json.loads(path.read_text())
-
-
-def write_json(path: Path, data) -> None:
-    path.write_text(json.dumps(data, indent=2) + "\n")
 
 
 def normalize_brand(brand: str) -> str:

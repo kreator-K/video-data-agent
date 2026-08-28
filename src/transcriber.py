@@ -56,7 +56,7 @@ if __name__ == "__main__":
     print("\n--- Transcript Preview ---")
     print(f"Language detected: {transcript['language']}")
     print(f"Total segments: {len(transcript['segments'])}")
-    print(f"\nFirst 3 segments:")
+    print("\nFirst 3 segments:")
     for seg in transcript['segments'][:3]:
         print(f"  [{seg['start']}s → {seg['end']}s] {seg['text']}")
     print(f"\nFull text:\n{transcript['text'][:300]}")

@@ -72,6 +72,6 @@ if __name__ == "__main__":
 
     frame_paths = extract_frames(str(latest_video))
 
-    print(f"\nFirst 3 frames saved:")
+    print("\nFirst 3 frames saved:")
     for path in frame_paths[:3]:
         print(f"  {path}")

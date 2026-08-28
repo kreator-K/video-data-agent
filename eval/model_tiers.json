@@ -1,13 +1,13 @@
 {
   "default_tier": "accuracy",
   "recommended_model": {
-    "model": "meta/llama-4-maverick-17b-128e-instruct",
+    "model": "meta/llama-3.2-90b-vision-instruct",
     "user_facing_prompt_variant": "strict_precision",
     "review_prompt_variant": "default",
     "source": "eval/model_ab_comparison.md",
     "dataset": "eval/golden_dataset.json",
-    "f1_score": 0.62,
-    "notes": "Selected from the 2026-07-02 live A/B run on the protected 36-frame human-labeled golden set. On the 360-frame Stage 5 set, strict_precision kept F1 at 0.39 while reducing false positives from 183 to 151."
+    "f1_score": 0.56,
+    "notes": "Current NVIDIA vision fallback default selected for higher-capacity vision reasoning. The unavailable retired endpoint has been removed from active model tiers after NVIDIA returned 410 Gone."
   },
   "selection_policy": {
     "primary": "highest_f1",
@@ -27,16 +27,13 @@
     "balanced": {
       "description": "Practical shortlist for routine evals: stronger vision without an overly wide sweep.",
       "models": [
-        "meta/llama-3.2-90b-vision-instruct",
-        "nvidia/nemotron-nano-12b-v2-vl"
+        "meta/llama-3.2-90b-vision-instruct"
       ]
     },
     "accuracy": {
-      "description": "Best current candidate set for selecting the default brand-detection model.",
+      "description": "Current available candidate set for selecting the default brand-detection model.",
       "models": [
-        "meta/llama-3.2-90b-vision-instruct",
-        "meta/llama-4-maverick-17b-128e-instruct",
-        "nvidia/nemotron-nano-12b-v2-vl"
+        "meta/llama-3.2-90b-vision-instruct"
       ]
     },
     "experimental": {
@@ -51,7 +48,6 @@
       "models": [
         "meta/llama-3.2-11b-vision-instruct",
         "meta/llama-3.2-90b-vision-instruct",
-        "meta/llama-4-maverick-17b-128e-instruct",
         "nvidia/nemotron-nano-12b-v2-vl",
         "kimi-k2.6",
         "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"

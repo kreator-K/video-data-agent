@@ -1,6 +1,7 @@
 import argparse
-import json
 from pathlib import Path
+
+from common import load_json, write_json
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -9,14 +10,6 @@ LABELS_PATH = ROOT / "eval/stage5_labels.json"
 DEFAULT_DECISIONS_PATH = ROOT / "eval/stage5_review_decisions_template.json"
 
 APPROVED_STATUSES = {"human_reviewed", "approved", "accepted_existing"}
-
-
-def load_json(path: Path):
-    return json.loads(path.read_text())
-
-
-def write_json(path: Path, data) -> None:
-    path.write_text(json.dumps(data, indent=2) + "\n")
 
 
 def normalize_brands(value) -> list[str]:
